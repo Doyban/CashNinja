@@ -1,8 +1,8 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.Spawner = function (game_state, name, position, properties) {
+CashNinja.Spawner = function (game_state, name, position, properties) {
   "use strict";
-  FruitNinja.Prefab.call(this, game_state, name, position, properties); // Extend Prefab class.
+  CashNinja.Prefab.call(this, game_state, name, position, properties); // Extend Prefab class.
 
   this.pool = this.game_state.groups[properties.pool]; // Pools
 
@@ -17,11 +17,11 @@ FruitNinja.Spawner = function (game_state, name, position, properties) {
   this.schedule_spawn();
 };
 
-FruitNinja.Spawner.prototype = Object.create(FruitNinja.Prefab.prototype);
-FruitNinja.Spawner.prototype.constructor = FruitNinja.Spawner;
+CashNinja.Spawner.prototype = Object.create(CashNinja.Prefab.prototype);
+CashNinja.Spawner.prototype.constructor = CashNinja.Spawner;
 
 // Make interval of spawn.
-FruitNinja.Spawner.prototype.schedule_spawn = function () {
+CashNinja.Spawner.prototype.schedule_spawn = function () {
   "use strict";
   var time;
   time = this.game_state.rnd.between(this.spawn_time.min, this.spawn_time.max);
@@ -29,7 +29,7 @@ FruitNinja.Spawner.prototype.schedule_spawn = function () {
   this.spawn_timer.start();
 };
 
-FruitNinja.Spawner.prototype.spawn = function () {
+CashNinja.Spawner.prototype.spawn = function () {
   "use strict";
   var object_name, object_position, object, object_velocity;
   // Calculate position and velocity.

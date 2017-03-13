@@ -1,8 +1,8 @@
- var FruitNinja = FruitNinja || {};
+ var CashNinja = CashNinja || {};
 
-FruitNinja.Lives = function (game_state, name, position, properties) {
+CashNinja.Lives = function (game_state, name, position, properties) {
   "use strict";
-  FruitNinja.Prefab.call(this, game_state, name, position, properties); // Extend Prefab class.
+  CashNinja.Prefab.call(this, game_state, name, position, properties); // Extend Prefab class.
 
   this.visible = false; // Make this prefabs invisible.
 
@@ -13,10 +13,10 @@ FruitNinja.Lives = function (game_state, name, position, properties) {
   this.add_lives(this.lives);  // Call add_lives method with the number of initialized lives.
 };
 
-FruitNinja.Lives.prototype = Object.create(FruitNinja.Prefab.prototype);
-FruitNinja.Lives.prototype.constructor = FruitNinja.Lives;
+CashNinja.Lives.prototype = Object.create(CashNinja.Prefab.prototype);
+CashNinja.Lives.prototype.constructor = CashNinja.Lives;
 
-FruitNinja.Lives.prototype.die = function () {
+CashNinja.Lives.prototype.die = function () {
   "use strict";
   var life;
   this.lives -= 1; // Decrease number of lives by 1.
@@ -31,7 +31,7 @@ FruitNinja.Lives.prototype.die = function () {
   }
 };
 
-FruitNinja.Lives.prototype.add_lives = function (number_of_lives) {
+CashNinja.Lives.prototype.add_lives = function (number_of_lives) {
   "use strict";
   var life_index, life;
   // For each live create Phaser sprites to represent its life.

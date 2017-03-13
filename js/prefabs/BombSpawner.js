@@ -1,14 +1,14 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.BombSpawner = function (game_state, name, position, properties) {
+CashNinja.BombSpawner = function (game_state, name, position, properties) {
   "use strict";
-  FruitNinja.Spawner.call(this, game_state, name, position, properties); // Extend Spawner class.
+  CashNinja.Spawner.call(this, game_state, name, position, properties); // Extend Spawner class.
 };
 
-FruitNinja.BombSpawner.prototype = Object.create(FruitNinja.Spawner.prototype);
-FruitNinja.BombSpawner.prototype.constructor = FruitNinja.BombSpawner;
+CashNinja.BombSpawner.prototype = Object.create(CashNinja.Spawner.prototype);
+CashNinja.BombSpawner.prototype.constructor = CashNinja.BombSpawner;
 
-FruitNinja.BombSpawner.prototype.create_object = function (name, position, velocity) {
+CashNinja.BombSpawner.prototype.create_object = function (name, position, velocity) {
   "use strict";
-  return new FruitNinja.Bomb(this.game_state, name, position, {texture: "bomb_image", group: "bombs", velocity: velocity}); // Return new bomb.
+  return new CashNinja.Bomb(this.game_state, name, position, {texture: "bomb_image", group: "bombs", velocity: velocity}); // Return new bomb.
 };

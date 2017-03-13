@@ -1,8 +1,8 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.Coin6Times = function (game_state, name, position, properties) {
+CashNinja.Coin6Times = function (game_state, name, position, properties) {
   "use strict";
-  FruitNinja.Cuttable.call(this, game_state, name, position, properties); // Extend Cuttable class.
+  CashNinja.Cuttable.call(this, game_state, name, position, properties); // Extend Cuttable class.
 
   this.body.setSize(20, 20); // Physical body of special coin.
 
@@ -13,10 +13,10 @@ FruitNinja.Coin6Times = function (game_state, name, position, properties) {
   this.kill_timer = this.game_state.game.time.create(false); // Create timer, which will be used to kill the coin when it is cut.
 };
 
-FruitNinja.Coin6Times.prototype = Object.create(FruitNinja.Cuttable.prototype);
-FruitNinja.Coin6Times.prototype.constructor = FruitNinja.Coin6Times;
+CashNinja.Coin6Times.prototype = Object.create(CashNinja.Cuttable.prototype);
+CashNinja.Coin6Times.prototype.constructor = CashNinja.Coin6Times;
 
-FruitNinja.Coin6Times.prototype.kill = function () {
+CashNinja.Coin6Times.prototype.kill = function () {
   "use strict";
   Phaser.Sprite.prototype.kill.call(this); // Extend kill method from Phaser.Sprite class.
   // Enable gravity again and stop kill timer.
@@ -24,9 +24,9 @@ FruitNinja.Coin6Times.prototype.kill = function () {
   this.kill_timer.stop();
 };
 
-FruitNinja.Coin6Times.prototype.cut = function () {
+CashNinja.Coin6Times.prototype.cut = function () {
   "use strict";
-  FruitNinja.Cuttable.prototype.cut.call(this); // Extend cut method from Cuttable class.
+  CashNinja.Cuttable.prototype.cut.call(this); // Extend cut method from Cuttable class.
 
   this.game_state.score += 5; // Increment score by 5.
   this.game_state.score += this.game_state.cut_multiplier; // Increase the score by cut multiplier.

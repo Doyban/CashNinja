@@ -1,8 +1,8 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.MenuItem = function (game_state, name, position, properties) {
+CashNinja.MenuItem = function (game_state, name, position, properties) {
   "use strict";
-  FruitNinja.TextPrefab.call(this, game_state, name, position, properties); // Extend TextPrefab class.
+  CashNinja.TextPrefab.call(this, game_state, name, position, properties); // Extend TextPrefab class.
 
   this.anchor.setTo(0.5); // Set center of texture.
 
@@ -13,10 +13,10 @@ FruitNinja.MenuItem = function (game_state, name, position, properties) {
   this.on_selection_animation.repeatAll(-1); // Keep repeating when it ends.
 };
 
-FruitNinja.MenuItem.prototype = Object.create(FruitNinja.TextPrefab.prototype);
-FruitNinja.MenuItem.prototype.constructor = FruitNinja.MenuItem;
+CashNinja.MenuItem.prototype = Object.create(CashNinja.TextPrefab.prototype);
+CashNinja.MenuItem.prototype.constructor = CashNinja.MenuItem;
 
-FruitNinja.MenuItem.prototype.selection_over = function () {
+CashNinja.MenuItem.prototype.selection_over = function () {
   "use strict";
   // When is paused.
   if (this.on_selection_animation.isPaused) {
@@ -30,12 +30,12 @@ FruitNinja.MenuItem.prototype.selection_over = function () {
   }
 };
 
-FruitNinja.MenuItem.prototype.selection_out = function () {
+CashNinja.MenuItem.prototype.selection_out = function () {
   "use strict";
   this.on_selection_animation.pause(); // Pause animation.
 };
 
-FruitNinja.MenuItem.prototype.select = function () {
+CashNinja.MenuItem.prototype.select = function () {
   "use strict";
   // The default item does nothing, it will be extended in different classes.
 };

@@ -1,26 +1,26 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.StoreState = function () {
+CashNinja.StoreState = function () {
   "use strict";
-  FruitNinja.JSONLevelState.call(this); // Extend JSONLevelState class.
+  CashNinja.JSONLevelState.call(this); // Extend JSONLevelState class.
 
   // Setting constructors of prefabs.
   this.prefab_classes = {
-    "background": FruitNinja.Prefab.prototype.constructor,
-    "title": FruitNinja.TextPrefab.prototype.constructor,
-    "money": FruitNinja.Money.prototype.constructor,
-    "text": FruitNinja.TextPrefab.prototype.constructor,
-    "upgrade_item": FruitNinja.UpgradeItem.prototype.constructor
+    "background": CashNinja.Prefab.prototype.constructor,
+    "title": CashNinja.TextPrefab.prototype.constructor,
+    "money": CashNinja.Money.prototype.constructor,
+    "text": CashNinja.TextPrefab.prototype.constructor,
+    "upgrade_item": CashNinja.UpgradeItem.prototype.constructor
   };
 };
 
-FruitNinja.StoreState.prototype = Object.create(FruitNinja.JSONLevelState.prototype);
-FruitNinja.StoreState.prototype.constructor = FruitNinja.StoreState;
+CashNinja.StoreState.prototype = Object.create(CashNinja.JSONLevelState.prototype);
+CashNinja.StoreState.prototype.constructor = CashNinja.StoreState;
 
-FruitNinja.StoreState.prototype.create = function () {
+CashNinja.StoreState.prototype.create = function () {
   "use strict";
   var menu_position, menu_items, menu_properties, menu;
-  FruitNinja.JSONLevelState.prototype.create.call(this);
+  CashNinja.JSONLevelState.prototype.create.call(this);
 
   // Adding menu.
   menu_position = new Phaser.Point(0, 0); // Anything, because menu is invisible.
@@ -29,10 +29,10 @@ FruitNinja.StoreState.prototype.create = function () {
     menu_items.push(menu_item); // Add menu item to menu items array.
   }, this);
   menu_properties = {texture: "", group: "background", menu_items: menu_items}; // Set properties of the menu.
-  menu = new FruitNinja.Menu(this, "menu", menu_position, menu_properties); // Create menu.
+  menu = new CashNinja.Menu(this, "menu", menu_position, menu_properties); // Create menu.
 };
 
-FruitNinja.StoreState.prototype.update = function () {
+CashNinja.StoreState.prototype.update = function () {
   "use strict";
   // Check if ESCAPE key is pressed.
   if (this.game.input.keyboard.isDown(Phaser.Keyboard.ESC)) {

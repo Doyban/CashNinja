@@ -1,8 +1,8 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.Cuttable = function (game_state, name, position, properties) {
+CashNinja.Cuttable = function (game_state, name, position, properties) {
   "use strict";
-  FruitNinja.Prefab.call(this, game_state, name, position, properties); // Extend Prefab class.
+  CashNinja.Prefab.call(this, game_state, name, position, properties); // Extend Prefab class.
 
   this.anchor.setTo(0.5); // Center the image.
   this.scale.setTo(5); // Scale 5 times the image.
@@ -19,11 +19,11 @@ FruitNinja.Cuttable = function (game_state, name, position, properties) {
   this.outOfBoundsKill = true;
 };
 
-FruitNinja.Cuttable.prototype = Object.create(FruitNinja.Prefab.prototype);
-FruitNinja.Cuttable.prototype.constructor = FruitNinja.Cuttable;
+CashNinja.Cuttable.prototype = Object.create(CashNinja.Prefab.prototype);
+CashNinja.Cuttable.prototype.constructor = CashNinja.Cuttable;
 
 // Reset objects.
-FruitNinja.Cuttable.prototype.reset = function (position_x, position_y, velocity) {
+CashNinja.Cuttable.prototype.reset = function (position_x, position_y, velocity) {
   "use strict";
   Phaser.Sprite.prototype.reset.call(this, position_x, position_y); // Extend reset method from Phaser.Sprite class.
   this.body.velocity.y = -velocity.y;
@@ -31,7 +31,7 @@ FruitNinja.Cuttable.prototype.reset = function (position_x, position_y, velocity
 };
 
 // Cut objects.
-FruitNinja.Cuttable.prototype.cut = function () {
+CashNinja.Cuttable.prototype.cut = function () {
   "use strict";
   var emitter;
 

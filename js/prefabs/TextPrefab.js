@@ -1,6 +1,6 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.TextPrefab = function (game_state, name, position, properties) {
+CashNinja.TextPrefab = function (game_state, name, position, properties) {
   "use strict";
   Phaser.Text.call(this, game_state.game, position.x, position.y, properties.text, properties.style); // Extend Phaser.Text class.
 
@@ -18,5 +18,5 @@ FruitNinja.TextPrefab = function (game_state, name, position, properties) {
   this.game_state.prefabs[name] = this; // Add itself to the prefabs of the game.
 };
 
-FruitNinja.TextPrefab.prototype = Object.create(Phaser.Text.prototype);
-FruitNinja.TextPrefab.prototype.constructor = FruitNinja.TextPrefab;
+CashNinja.TextPrefab.prototype = Object.create(Phaser.Text.prototype);
+CashNinja.TextPrefab.prototype.constructor = CashNinja.TextPrefab;

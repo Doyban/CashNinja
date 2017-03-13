@@ -1,8 +1,8 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.Menu = function (game_state, name, position, properties) {
+CashNinja.Menu = function (game_state, name, position, properties) {
   "use strict";
-  FruitNinja.Prefab.call(this, game_state, name, position, properties); // Extend Prefab class.
+  CashNinja.Prefab.call(this, game_state, name, position, properties); // Extend Prefab class.
 
   this.visible = false; // Make this prefab invisible.
 
@@ -13,10 +13,10 @@ FruitNinja.Menu = function (game_state, name, position, properties) {
   this.cursor_keys = this.game_state.game.input.keyboard.createCursorKeys(); // Allow player to navigate through menu items.
 };
 
-FruitNinja.Menu.prototype = Object.create(FruitNinja.Prefab.prototype);
-FruitNinja.Menu.prototype.constructor = FruitNinja.Menu;
+CashNinja.Menu.prototype = Object.create(CashNinja.Prefab.prototype);
+CashNinja.Menu.prototype.constructor = CashNinja.Menu;
 
-FruitNinja.Menu.prototype.update = function () {
+CashNinja.Menu.prototype.update = function () {
   "use strict";
   /**
    * Select item from menu.

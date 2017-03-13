@@ -4,13 +4,13 @@
     "sword_image": {"type": "image", "source": "assets/images/sword.png"},
     "bomb_image": {"type": "image", "source": "assets/images/bomb.png"},
     "background_image": {"type": "image", "source": "assets/images/background.png"},
-    "fruits_spritesheet": {"type": "spritesheet", "source": "assets/images/coins.png", "frame_width": 24, "frame_height": 24}
+    "coins_spritesheet": {"type": "spritesheet", "source": "assets/images/coins.png", "frame_width": 24, "frame_height": 24}
   },
   "groups": [
     "background",
     "spawners",
     "cuts",
-    "fruits",
+    "coins",
     "special_coins",
     "bombs",
     "hud"
@@ -28,7 +28,7 @@
       "type": "score",
       "position": {"x": 0.05, "y": 0.05},
       "properties": {
-        "text": "Fruits: ",
+        "text": "Cash: ",
         "style": {
           "font": "48px Arial",
           "fill": "#fff"
@@ -154,13 +154,13 @@
         "velocity_y": {"min": -820, "max": -970}
       }
     },
-    "fruit_spawner": {
-      "type": "fruit_spawner",
+    "coin_spawner": {
+      "type": "coin_spawner",
       "position": {"x": 0, "y": 0},
       "properties": {
         "texture": "",
         "group": "spawners",
-        "pool": "fruits",
+        "pool": "coins",
         "spawn_time": {"min": 1, "max": 1},
         "velocity_x": {"min": -100, "max": 100},
         "velocity_y": {"min": -550, "max": -700},

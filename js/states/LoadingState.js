@@ -1,21 +1,21 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.LoadingState = function () {
+CashNinja.LoadingState = function () {
   "use strict";
   Phaser.State.call(this); // Extend Phaser.State class.
 };
 
-FruitNinja.prototype = Object.create(Phaser.State.prototype);
-FruitNinja.prototype.constructor = FruitNinja.LoadingState;
+CashNinja.prototype = Object.create(Phaser.State.prototype);
+CashNinja.prototype.constructor = CashNinja.LoadingState;
 
 // Init data from BootState class.
-FruitNinja.LoadingState.prototype.init = function (level_data, next_state) {
+CashNinja.LoadingState.prototype.init = function (level_data, next_state) {
   "use strict";
   this.level_data = level_data;
   this.next_state = next_state;
 };
 
-FruitNinja.LoadingState.prototype.preload = function () {
+CashNinja.LoadingState.prototype.preload = function () {
   "use strict";
   var assets, asset_loader, asset_key, asset;
   assets = this.level_data.assets;
@@ -36,7 +36,7 @@ FruitNinja.LoadingState.prototype.preload = function () {
   }
 };
 
-FruitNinja.LoadingState.prototype.create = function () {
+CashNinja.LoadingState.prototype.create = function () {
   "use strict";
   // this.game.state.start("GameState", true, false, this.level_data); // Start GameState state.
   this.game.state.start(this.next_state, true, false, this.level_data); // Start next level state.

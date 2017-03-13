@@ -1,6 +1,6 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.JSONLevelState = function () {
+CashNinja.JSONLevelState = function () {
   "use strict";
   Phaser.State.call(this); // Extend Phaser.State class.
 
@@ -10,10 +10,10 @@ FruitNinja.JSONLevelState = function () {
   };
 };
 
-FruitNinja.JSONLevelState.prototype = Object.create(Phaser.State.prototype);
-FruitNinja.JSONLevelState.prototype.constructor = FruitNinja.JSONLevelState;
+CashNinja.JSONLevelState.prototype = Object.create(Phaser.State.prototype);
+CashNinja.JSONLevelState.prototype.constructor = CashNinja.JSONLevelState;
 
-FruitNinja.JSONLevelState.prototype.init = function (level_data) {
+CashNinja.JSONLevelState.prototype.init = function (level_data) {
   "use strict";
   this.level_data = level_data; // Save level data.
 
@@ -23,7 +23,7 @@ FruitNinja.JSONLevelState.prototype.init = function (level_data) {
   this.scale.pageAlignVertically = true;
 };
 
-FruitNinja.JSONLevelState.prototype.create = function () {
+CashNinja.JSONLevelState.prototype.create = function () {
   "use strict";
   var group_name, prefab_name;
 
@@ -42,7 +42,7 @@ FruitNinja.JSONLevelState.prototype.create = function () {
   }
 };
 
-FruitNinja.JSONLevelState.prototype.create_prefab = function (prefab_name, prefab_data) {
+CashNinja.JSONLevelState.prototype.create_prefab = function (prefab_name, prefab_data) {
   "use strict";
   var prefab_position, prefab;
   // Create object according to its type.

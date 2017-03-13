@@ -1,14 +1,14 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.Money = function (game_state, name, position, properties) {
+CashNinja.Money = function (game_state, name, position, properties) {
   "use strict";
-  FruitNinja.TextPrefab.call(this, game_state, name, position, properties); // Extend TextPrefab class.
+  CashNinja.TextPrefab.call(this, game_state, name, position, properties); // Extend TextPrefab class.
 };
 
-FruitNinja.Money.prototype = Object.create(FruitNinja.TextPrefab.prototype);
-FruitNinja.Money.prototype.constructor = FruitNinja.Money;
+CashNinja.Money.prototype = Object.create(CashNinja.TextPrefab.prototype);
+CashNinja.Money.prototype.constructor = CashNinja.Money;
 
-FruitNinja.Money.prototype.update = function () {
+CashNinja.Money.prototype.update = function () {
   "use strict";
   this.text = "Money: " + localStorage.money; // Show current money of player.
 };

@@ -1,6 +1,6 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.Cut = function (game_state, name, position, properties) {
+CashNinja.Cut = function (game_state, name, position, properties) {
   "use strict";
   Phaser.Graphics.call(this, game_state.game, position.x, position.y); // Extend Phaser.Graphics class.
 
@@ -25,10 +25,10 @@ FruitNinja.Cut = function (game_state, name, position, properties) {
   this.kill_timer.start();
 };
 
-FruitNinja.Cut.prototype = Object.create(Phaser.Graphics.prototype);
-FruitNinja.Cut.prototype.constructor = FruitNinja.Cut;
+CashNinja.Cut.prototype = Object.create(Phaser.Graphics.prototype);
+CashNinja.Cut.prototype.constructor = CashNinja.Cut;
 
-FruitNinja.Cut.prototype.kill = function () {
+CashNinja.Cut.prototype.kill = function () {
   "use strict";
 
   // Clear the graphics.

@@ -1,10 +1,10 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.Upgrade = function (game_state) {
+CashNinja.Upgrade = function (game_state) {
   "use strict";
   this.game_state = game_state; // Save game state.
 };
 
-FruitNinja.Upgrade.prototype.apply = function () {
+CashNinja.Upgrade.prototype.apply = function () {
   "use strict";
 };

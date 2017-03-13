@@ -1,4 +1,4 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
 // Configure Firebase.
 var config = {
@@ -12,11 +12,11 @@ var config = {
 firebase.initializeApp(config); // Initialize Firebase.
 
 var game = new Phaser.Game("100%", "100%", Phaser.CANVAS);
-game.state.add("BootState", new FruitNinja.BootState());
-game.state.add("LoadingState", new FruitNinja.LoadingState());
-game.state.add("GameState", new FruitNinja.LevelState());
-game.state.add("TitleState", new FruitNinja.TitleState());
-game.state.add("StoreState", new FruitNinja.StoreState());
-game.state.add("FirebaseState", new FruitNinja.FirebaseState());
+game.state.add("BootState", new CashNinja.BootState());
+game.state.add("LoadingState", new CashNinja.LoadingState());
+game.state.add("GameState", new CashNinja.LevelState());
+game.state.add("TitleState", new CashNinja.TitleState());
+game.state.add("StoreState", new CashNinja.StoreState());
+game.state.add("FirebaseState", new CashNinja.FirebaseState());
 game.state.start("BootState", true, false, "assets/levels/title_screen.json", "TitleState");
 // game.state.start("FirebaseState");

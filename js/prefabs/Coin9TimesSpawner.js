@@ -1,14 +1,14 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.Coin9TimesSpawner = function (game_state, name, position, properties) {
+CashNinja.Coin9TimesSpawner = function (game_state, name, position, properties) {
   "use strict";
-  FruitNinja.Spawner.call(this, game_state, name, position, properties); // Extend Spawner class.
+  CashNinja.Spawner.call(this, game_state, name, position, properties); // Extend Spawner class.
 };
 
-FruitNinja.Coin9TimesSpawner.prototype = Object.create(FruitNinja.Spawner.prototype);
-FruitNinja.Coin9TimesSpawner.prototype.constructor = FruitNinja.Coin9TimesSpawner;
+CashNinja.Coin9TimesSpawner.prototype = Object.create(CashNinja.Spawner.prototype);
+CashNinja.Coin9TimesSpawner.prototype.constructor = CashNinja.Coin9TimesSpawner;
 
-FruitNinja.Coin9TimesSpawner.prototype.create_object = function (name, position, velocity) {
+CashNinja.Coin9TimesSpawner.prototype.create_object = function (name, position, velocity) {
   "use strict";
-  return new FruitNinja.Coin9Times(this.game_state, name, position, {texture: "fruits_spritesheet", group: "special_coins", frame: 8, velocity: velocity}); // Return new special coin.
+  return new CashNinja.Coin9Times(this.game_state, name, position, {texture: "coins_spritesheet", group: "special_coins", frame: 8, velocity: velocity}); // Return new special coin.
 };

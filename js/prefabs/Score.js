@@ -1,14 +1,14 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.Score = function (game_state, name, position, properties) {
+CashNinja.Score = function (game_state, name, position, properties) {
   "use strict";
-  FruitNinja.TextPrefab.call(this, game_state, name, position, properties); // Extend TextPrefab class.
+  CashNinja.TextPrefab.call(this, game_state, name, position, properties); // Extend TextPrefab class.
 };
 
-FruitNinja.Score.prototype = Object.create(FruitNinja.TextPrefab.prototype);
-FruitNinja.Score.prototype.constructor = FruitNinja.Score;
+CashNinja.Score.prototype = Object.create(CashNinja.TextPrefab.prototype);
+CashNinja.Score.prototype.constructor = CashNinja.Score;
 
-FruitNinja.Score.prototype.update = function () {
+CashNinja.Score.prototype.update = function () {
   "use strict";
-  this.text = "Fruits: " + this.game_state.score; // Display score.
+  this.text = "Cash: " + this.game_state.score; // Display score.
 };

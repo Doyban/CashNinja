@@ -49,7 +49,7 @@
         "text": "Super blade",
         "style": {"font": "32px Arial", "fill": "#FFF"},
         "group": "menu_items",
-        "description": "A super blade that gives one\n extra point for each fruit",
+        "description": "A super blade that gives one\n extra point for each coin",
         "price": 100,
         "upgrade_type": "super_blade",
         "upgrade_properties": {"cut_multiplier": 2}

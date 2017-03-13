@@ -1,36 +1,36 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.LevelState = function () {
+CashNinja.LevelState = function () {
   "use strict";
   Phaser.State.call(this); // Extend Phaser.State class.
 
   // Setting constructors of prefabs.
   this.prefab_classes = {
     // Map different types to the constructors of the appropriate classes.
-    "background": FruitNinja.Prefab.prototype.constructor,
-    "score": FruitNinja.Score.prototype.constructor,
-    "lives": FruitNinja.Lives.prototype.constructor,
-    "fruit_spawner": FruitNinja.FruitSpawner.prototype.constructor,
-    "bomb_spawner": FruitNinja.BombSpawner.prototype.constructor,
-    "coin_2times_spawner": FruitNinja.Coin2TimesSpawner.prototype.constructor,
-    "coin_3times_spawner": FruitNinja.Coin3TimesSpawner.prototype.constructor,
-    "coin_4times_spawner": FruitNinja.Coin4TimesSpawner.prototype.constructor,
-    "coin_5times_spawner": FruitNinja.Coin5TimesSpawner.prototype.constructor,
-    "coin_6times_spawner": FruitNinja.Coin6TimesSpawner.prototype.constructor,
-    "coin_7times_spawner": FruitNinja.Coin7TimesSpawner.prototype.constructor,
-    "coin_8times_spawner": FruitNinja.Coin8TimesSpawner.prototype.constructor,
-    "coin_9times_spawner": FruitNinja.Coin9TimesSpawner.prototype.constructor,
-    "coin_10times_spawner": FruitNinja.Coin10TimesSpawner.prototype.constructor
+    "background": CashNinja.Prefab.prototype.constructor,
+    "score": CashNinja.Score.prototype.constructor,
+    "lives": CashNinja.Lives.prototype.constructor,
+    "coin_spawner": CashNinja.CoinSpawner.prototype.constructor,
+    "bomb_spawner": CashNinja.BombSpawner.prototype.constructor,
+    "coin_2times_spawner": CashNinja.Coin2TimesSpawner.prototype.constructor,
+    "coin_3times_spawner": CashNinja.Coin3TimesSpawner.prototype.constructor,
+    "coin_4times_spawner": CashNinja.Coin4TimesSpawner.prototype.constructor,
+    "coin_5times_spawner": CashNinja.Coin5TimesSpawner.prototype.constructor,
+    "coin_6times_spawner": CashNinja.Coin6TimesSpawner.prototype.constructor,
+    "coin_7times_spawner": CashNinja.Coin7TimesSpawner.prototype.constructor,
+    "coin_8times_spawner": CashNinja.Coin8TimesSpawner.prototype.constructor,
+    "coin_9times_spawner": CashNinja.Coin9TimesSpawner.prototype.constructor,
+    "coin_10times_spawner": CashNinja.Coin10TimesSpawner.prototype.constructor
   };
 };
 
-// FruitNinja.LevelState.prototype = Object.create(Phaser.State.prototype);
-FruitNinja.LevelState.prototype = Object.create(FruitNinja.JSONLevelState.prototype);
-FruitNinja.LevelState.prototype.constructor = FruitNinja.LevelState;
+// CashNinja.LevelState.prototype = Object.create(Phaser.State.prototype);
+CashNinja.LevelState.prototype = Object.create(CashNinja.JSONLevelState.prototype);
+CashNinja.LevelState.prototype.constructor = CashNinja.LevelState;
 
-FruitNinja.LevelState.prototype.init = function (level_data) {
+CashNinja.LevelState.prototype.init = function (level_data) {
   "use strict";
-  FruitNinja.JSONLevelState.prototype.init.call(this, level_data);
+  CashNinja.JSONLevelState.prototype.init.call(this, level_data);
 
   // Set up physics system.
   this.game.physics.startSystem(Phaser.Physics.ARCADE);
@@ -44,25 +44,25 @@ FruitNinja.LevelState.prototype.init = function (level_data) {
 };
 
 // Create games prefabs.
-FruitNinja.LevelState.prototype.create = function () {
+CashNinja.LevelState.prototype.create = function () {
   "use strict";
-  FruitNinja.JSONLevelState.prototype.create.call(this); // Call JSONLevelState class.
+  CashNinja.JSONLevelState.prototype.create.call(this); // Call JSONLevelState class.
   // Add swipes.
   this.game.input.onDown.add(this.start_swipe, this);
   this.game.input.onUp.add(this.end_swipe, this);
 
-  this.upgrades = this.game.plugins.add(FruitNinja.Upgrades, this); // Initialize upgrades plugin.
+  this.upgrades = this.game.plugins.add(CashNinja.Upgrades, this); // Initialize upgrades plugin.
   this.upgrades.apply_upgrades(this.game.current_upgrades); // Apply upgrades.
 };
 
 // Start swipe.
-FruitNinja.LevelState.prototype.start_swipe = function (pointer) {
+CashNinja.LevelState.prototype.start_swipe = function (pointer) {
   "use strict";
   this.start_swipe_point = new Phaser.Point(pointer.x, pointer.y); // Start swipe point is simply x & y of pointer.
 };
 
 // End swipe.
-FruitNinja.LevelState.prototype.end_swipe = function (pointer) {
+CashNinja.LevelState.prototype.end_swipe = function (pointer) {
   "use strict";
   var swipe_length, cut;
 
@@ -70,21 +70,21 @@ FruitNinja.LevelState.prototype.end_swipe = function (pointer) {
   swipe_length = Phaser.Point.distance(this.end_swipe_point, this.start_swipe_point); // Calculate length between end swipe point and start swipe point.
   // Detect only swipes, which length is greater or equal minimum swipe length.
   if (swipe_length >= this.MINIMUM_SWIPE_LENGTH) {
-    cut = new FruitNinja.Cut(this, "cut", {x: 0, y: 0}, {group: "cuts", start: this.start_swipe_point, end: this.end_swipe_point, duration: 0.3, style: Object.create(this.CUT_STYLE)});
+    cut = new CashNinja.Cut(this, "cut", {x: 0, y: 0}, {group: "cuts", start: this.start_swipe_point, end: this.end_swipe_point, duration: 0.3, style: Object.create(this.CUT_STYLE)});
 
     this.swipe = new Phaser.Line(this.start_swipe_point.x, this.start_swipe_point.y, this.end_swipe_point.x, this.end_swipe_point.y);
 
     // console.log("Start swipe point: " + this.start_swipe_point);
     // console.log("End  swipe point: " + this.end_swipe_point);
 
-    this.groups.fruits.forEachAlive(this.check_collision, this); // Check for collision between cuts and fruits.
+    this.groups.coins.forEachAlive(this.check_collision, this); // Check for collision between cuts and coins.
     this.groups.bombs.forEachAlive(this.check_collision, this); // Check for collision between cuts and bombs.
     this.groups.special_coins.forEachAlive(this.check_collision, this); // Check for collision between cuts and special coins.
   }
 };
 
 // Check for the collision between the swipe lines and the cuttables prefabs bounding box.
-FruitNinja.LevelState.prototype.check_collision = function (object) {
+CashNinja.LevelState.prototype.check_collision = function (object) {
   "use strict";
   var object_rectangle, line1, line2, line3, line4, intersection;
 
@@ -103,7 +103,7 @@ FruitNinja.LevelState.prototype.check_collision = function (object) {
 };
 
 // Game over - restart the game.
-FruitNinja.LevelState.prototype.game_over = function () {
+CashNinja.LevelState.prototype.game_over = function () {
   "use strict";
   // this.game_state.restart(true, false, this.level_data);
   this.game.state.start("BootState", true, false, "assets/levels/title_screen.json", "TitleState");

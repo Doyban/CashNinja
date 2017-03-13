@@ -1,15 +1,15 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.SuperBlade = function (game_state, properties) {
+CashNinja.SuperBlade = function (game_state, properties) {
   "use strict";
-  FruitNinja.Upgrade.call(this, game_state); // Extend Upgrade class.
+  CashNinja.Upgrade.call(this, game_state); // Extend Upgrade class.
   this.cut_multiplier = properties.cut_multiplier; // Set to cut multiplier.
 };
 
-FruitNinja.SuperBlade.prototype = Object.create(FruitNinja.Upgrade.prototype);
-FruitNinja.SuperBlade.prototype.constructor = FruitNinja.SuperBlade;
+CashNinja.SuperBlade.prototype = Object.create(CashNinja.Upgrade.prototype);
+CashNinja.SuperBlade.prototype.constructor = CashNinja.SuperBlade;
 
-FruitNinja.SuperBlade.prototype.apply = function () {
+CashNinja.SuperBlade.prototype.apply = function () {
   "use strict";
   this.game_state.cut_multiplier = this.cut_multiplier; // Change cut multiplier in game state.
 };

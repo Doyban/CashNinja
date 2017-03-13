@@ -1,14 +1,14 @@
-var FruitNinja = FruitNinja || {};
+var CashNinja = CashNinja || {};
 
-FruitNinja.FirebaseState = function () {
+CashNinja.FirebaseState = function () {
   "use strict";
   Phaser.State.call(this); // Extend Phaser.State.
 };
 
-FruitNinja.FirebaseState.prototype = Object.create(Phaser.State.prototype);
-FruitNinja.FirebaseState.prototype.constructor = FruitNinja.FirebaseState;
+CashNinja.FirebaseState.prototype = Object.create(Phaser.State.prototype);
+CashNinja.FirebaseState.prototype.constructor = CashNinja.FirebaseState;
 
-FruitNinja.FirebaseState.prototype.create = function () {
+CashNinja.FirebaseState.prototype.create = function () {
   "use strict";
   // var provider;
 
@@ -54,7 +54,7 @@ FruitNinja.FirebaseState.prototype.create = function () {
 };
 
 // Handle on success login.
-FruitNinja.FirebaseState.prototype.on_login = function (result) {
+CashNinja.FirebaseState.prototype.on_login = function (result) {
   "use strict";
   console.log(result);
 
@@ -62,7 +62,7 @@ FruitNinja.FirebaseState.prototype.on_login = function (result) {
 };
 
 // Handle on error occurs.
-FruitNinja.FirebaseState.prototype.handle_error = function (error) {
+CashNinja.FirebaseState.prototype.handle_error = function (error) {
   "use strict";
   console.log(error);
 };
