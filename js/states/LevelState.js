@@ -11,12 +11,16 @@ FruitNinja.LevelState = function () {
     "score": FruitNinja.Score.prototype.constructor,
     "lives": FruitNinja.Lives.prototype.constructor,
     "fruit_spawner": FruitNinja.FruitSpawner.prototype.constructor,
-    "special_fruit_spawner": FruitNinja.SpecialFruitSpawner.prototype.constructor,
-    "bomb_spawner": FruitNinja.BombSpawner.prototype.constructor
-    // "cuttable": FruitNinja.Cuttable.prototype.constructor,
-    // "fruit": FruitNinja.Fruit.prototype.constructor,
-    // "bomb": FruitNinja.Bomb.prototype.constructor,
-    // "special_fruit": FruitNinja.SpecialFruit.prototype.constructor
+    "bomb_spawner": FruitNinja.BombSpawner.prototype.constructor,
+    "coin_2times_spawner": FruitNinja.Coin2TimesSpawner.prototype.constructor,
+    "coin_3times_spawner": FruitNinja.Coin3TimesSpawner.prototype.constructor,
+    "coin_4times_spawner": FruitNinja.Coin4TimesSpawner.prototype.constructor,
+    "coin_5times_spawner": FruitNinja.Coin5TimesSpawner.prototype.constructor,
+    "coin_6times_spawner": FruitNinja.Coin6TimesSpawner.prototype.constructor,
+    "coin_7times_spawner": FruitNinja.Coin7TimesSpawner.prototype.constructor,
+    "coin_8times_spawner": FruitNinja.Coin8TimesSpawner.prototype.constructor,
+    "coin_9times_spawner": FruitNinja.Coin9TimesSpawner.prototype.constructor,
+    "coin_10times_spawner": FruitNinja.Coin10TimesSpawner.prototype.constructor
   };
 };
 
@@ -26,12 +30,6 @@ FruitNinja.LevelState.prototype.constructor = FruitNinja.LevelState;
 
 FruitNinja.LevelState.prototype.init = function (level_data) {
   "use strict";
-  // this.level_data = level_data; // Save level data.
-
-  // Set up scale.
-  // this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-  // this.scale.pageAlignHorizontally = true;
-  // this.scale.pageAlignVertically = true;
   FruitNinja.JSONLevelState.prototype.init.call(this, level_data);
 
   // Set up physics system.
@@ -48,22 +46,6 @@ FruitNinja.LevelState.prototype.init = function (level_data) {
 // Create games prefabs.
 FruitNinja.LevelState.prototype.create = function () {
   "use strict";
-  // var group_name, prefab_name;
-  //
-  // // Create prefabs groups.
-  // this.groups = {};
-  // this.level_data.groups.forEach(function (group_name) {
-  //   this.groups[group_name] = this.game.add.group();
-  // }, this);
-  //
-  // // Create prefabs.
-  // this.prefabs = {};
-  // for (prefab_name in this.level_data.prefabs) {
-  //   if (this.level_data.prefabs.hasOwnProperty(prefab_name)) {
-  //     this.create_prefab(prefab_name, this.level_data.prefabs[prefab_name]);
-  //   }
-  // }
-
   FruitNinja.JSONLevelState.prototype.create.call(this); // Call JSONLevelState class.
   // Add swipes.
   this.game.input.onDown.add(this.start_swipe, this);
@@ -72,23 +54,6 @@ FruitNinja.LevelState.prototype.create = function () {
   this.upgrades = this.game.plugins.add(FruitNinja.Upgrades, this); // Initialize upgrades plugin.
   this.upgrades.apply_upgrades(this.game.current_upgrades); // Apply upgrades.
 };
-
-// FruitNinja.LevelState.prototype.create_prefab = function (prefab_name, prefab_data) {
-//   "use strict";
-//   var prefab_position, prefab;
-//   // Create object according to its type.
-//   if (this.prefab_classes.hasOwnProperty(prefab_data.type)) {
-//     // For percentage value of position.
-//     if (prefab_data.position.x > 0 && prefab_data.position.x <= 1) {
-//       prefab_position = new Phaser.Point(prefab_data.position.x * this.game.world.width, prefab_data.position.y * this.game.world.height); // Set position relatively.
-//     }
-//     // For absolute (pixels) value of position.
-//     else {
-//       prefab_position = prefab_data.position; // Set position absolutely, it will be the position of prefabs data.
-//     }
-//     prefab = new this.prefab_classes[prefab_data.type](this, prefab_name, prefab_position, prefab_data.properties); // Create new prefabs, all properties should be define in JSON file.
-//   }
-// };
 
 // Start swipe.
 FruitNinja.LevelState.prototype.start_swipe = function (pointer) {
@@ -107,16 +72,14 @@ FruitNinja.LevelState.prototype.end_swipe = function (pointer) {
   if (swipe_length >= this.MINIMUM_SWIPE_LENGTH) {
     cut = new FruitNinja.Cut(this, "cut", {x: 0, y: 0}, {group: "cuts", start: this.start_swipe_point, end: this.end_swipe_point, duration: 0.3, style: Object.create(this.CUT_STYLE)});
 
-    this.swipe = new Phaser.Line(this.start_swipe_point.x, this.start_swipe_point.y, this.end_swipe_point.x, this.end_swipe_point.y); // Create new Phaser line to represent swipe line.
+    this.swipe = new Phaser.Line(this.start_swipe_point.x, this.start_swipe_point.y, this.end_swipe_point.x, this.end_swipe_point.y);
 
     // console.log("Start swipe point: " + this.start_swipe_point);
     // console.log("End  swipe point: " + this.end_swipe_point);
 
-    // this.groups.cuttables.forEachAlive(this.check_collision, this); // Check for collision between cuts and cuttables prefabs.
-
     this.groups.fruits.forEachAlive(this.check_collision, this); // Check for collision between cuts and fruits.
     this.groups.bombs.forEachAlive(this.check_collision, this); // Check for collision between cuts and bombs.
-    this.groups.special_fruits.forEachAlive(this.check_collision, this); // Check for collision between cuts and special fruits.
+    this.groups.special_coins.forEachAlive(this.check_collision, this); // Check for collision between cuts and special coins.
   }
 };
 
