@@ -33,7 +33,7 @@ FruitNinja.Spawner.prototype.spawn = function () {
   "use strict";
   var object_name, object_position, object, object_velocity;
   // Calculate position and velocity.
-  object_position = new Phaser.Point(this.game_state.rnd.between(0.2 * this.game_state.game.world.width, 0.8 * this.game_state.game.world.width), this.game_state.game.world.height); // Vertical position set between 20% to 80% of game world width, horizontal position set to 100%.
+  object_position = new Phaser.Point(this.game_state.rnd.between(0.2 * this.game_state.game.world.width, 0.8 * this.game_state.game.world.width), 0); // Vertical position set between 20% to 80% of game world width, horizontal position set to 100%.
   object_velocity = new Phaser.Point(this.game_state.rnd.between(this.velocity_x.min, this.velocity_x.max), this.game_state.rnd.between(this.velocity_y.min, this.velocity_y.max)); // Value between maximum and minimum velocity.
 
   object = this.pool.getFirstDead();

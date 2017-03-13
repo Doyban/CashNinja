@@ -18,5 +18,5 @@ game.state.add("GameState", new FruitNinja.LevelState());
 game.state.add("TitleState", new FruitNinja.TitleState());
 game.state.add("StoreState", new FruitNinja.StoreState());
 game.state.add("FirebaseState", new FruitNinja.FirebaseState());
-// game.state.start("BootState", true, false, "assets/levels/title_screen.json", "TitleState");
-game.state.start("FirebaseState");
+game.state.start("BootState", true, false, "assets/levels/title_screen.json", "TitleState");
+// game.state.start("FirebaseState");
