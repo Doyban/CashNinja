@@ -4,7 +4,7 @@
     "sword_image": {"type": "image", "source": "assets/images/sword.png"},
     "bomb_image": {"type": "image", "source": "assets/images/bomb.png"},
     "background_image": {"type": "image", "source": "assets/images/background.png"},
-    "fruits_spritesheet": {"type": "spritesheet", "source": "assets/images/coins.png", "frame_width": 34, "frame_height": 34}
+    "fruits_spritesheet": {"type": "spritesheet", "source": "assets/images/coins.png", "frame_width": 24, "frame_height": 24}
   },
   "groups": [
     "background",
