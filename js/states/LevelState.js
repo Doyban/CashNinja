@@ -37,7 +37,7 @@ CashNinja.LevelState.prototype.init = function (level_data) {
   this.game.physics.arcade.gravity.y = 1000;
 
   this.MINIMUM_SWIPE_LENGTH = 50; // Minimum swipe length in pixels.
-  this.CUT_STYLE = {line_width: 5, color: 0xE82C0C, alpha: 1}; // Cut style.
+  this.CUT_STYLE = {line_width: 7, color: 0x5CA37B, alpha: 1}; // Cut style.
 
   this.score = 0; // Initialize score with default value of 0.
   this.cut_multiplier = 1; // Initialize cut multiplier as 1.

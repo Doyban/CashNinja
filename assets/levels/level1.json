@@ -31,7 +31,7 @@
         "text": "Cash: ",
         "style": {
           "font": "48px Arial",
-          "fill": "#333"
+          "fill": "#E99F16"
         },
         "group": "hud"
       }

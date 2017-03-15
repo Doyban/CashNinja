@@ -23,7 +23,7 @@
         "text": "CashNinja",
         "style": {
           "font": "72px Arial",
-          "fill": "#333"
+          "fill": "#C39D3C"
         },
         "group": "hud",
         "anchor": {"x": 0.5, "y": 0.5}
@@ -34,7 +34,10 @@
       "position": {"x": 0.5, "y": 0.6},
       "properties": {
         "text": "Play",
-        "style": {"font": "32px Arial", "fill": "#333"},
+        "style": {
+          "font": "32px Arial",
+          "fill": "#B51A03"
+        },
         "group": "menu_items",
         "level_file": "assets/levels/level1.json",
         "state_name": "GameState"
@@ -45,7 +48,10 @@
       "position": {"x": 0.5, "y": 0.7},
       "properties": {
         "text": "Store",
-        "style": {"font": "32px Arial", "fill": "#333"},
+        "style": {
+          "font": "32px Arial",
+          "fill": "#B51A03"
+        },
         "group": "menu_items",
         "level_file": "assets/levels/store.json",
         "state_name": "StoreState"

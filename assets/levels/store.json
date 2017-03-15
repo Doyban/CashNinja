@@ -23,7 +23,7 @@
         "text": "Store",
         "style": {
           "font": "48px Arial",
-          "fill": "#333"
+          "fill": "#E99F16"
         },
         "group": "hud",
         "anchor": {"x": 0.5, "y": 0.5}
@@ -36,7 +36,7 @@
         "text": "",
         "style": {
           "font": "32px Arial",
-          "fill": "#333"
+          "fill": "#E1F50A"
         },
         "group": "hud",
         "anchor": {"x": 0.5, "y": 0.5}
@@ -47,7 +47,10 @@
       "position": {"x": 0.3, "y": 0.3},
       "properties": {
         "text": "Super blade",
-        "style": {"font": "32px Arial", "fill": "#333"},
+        "style": {
+          "font": "32px Arial",
+          "fill": "#2F57D0"
+        },
         "group": "menu_items",
         "description": "A super blade that gives one\n extra point for each coin",
         "price": 100,
@@ -60,7 +63,10 @@
       "position": {"x": 0.3, "y": 0.5},
       "properties": {
         "text": "Extra blade",
-        "style": {"font": "32px Arial", "fill": "#333"},
+        "style": {
+          "font": "32px Arial",
+          "fill": "#2F57D0"
+        },
         "group": "menu_items",
         "description": "Gets an extra blade, which\n gives one extra life",
         "price": 50,
