@@ -36,8 +36,8 @@ CashNinja.Coin10Times.prototype.cut = function () {
     this.body.velocity.x = 0;
     this.body.velocity.y = 0;
 
-    // Keep in the air for 3 seconds and start the killer timer.
-    this.kill_timer.add(Phaser.Timer.SECOND * 3, this.kill, this);
+    // Keep in the air for 4 seconds and start the killer timer.
+    this.kill_timer.add(Phaser.Timer.SECOND * 4, this.kill, this);
     this.kill_timer.start();
   }
 };
