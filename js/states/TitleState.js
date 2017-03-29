@@ -8,7 +8,6 @@ CashNinja.TitleState = function () {
   this.prefab_classes = {
     "background": CashNinja.Prefab.prototype.constructor,
     "title": CashNinja.TextPrefab.prototype.constructor,
-    // "button_item": CashNinja.Prefab.prototype.constructor,
     "start_state_item": CashNinja.StartStateItem.prototype.constructor
   };
 };
