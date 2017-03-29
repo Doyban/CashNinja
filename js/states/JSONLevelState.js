@@ -57,4 +57,5 @@ CashNinja.JSONLevelState.prototype.create_prefab = function (prefab_name, prefab
     }
     prefab = new this.prefab_classes[prefab_data.type](this, prefab_name, prefab_position, prefab_data.properties);
   }
+  return prefab;
 };

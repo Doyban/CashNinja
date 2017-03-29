@@ -15,7 +15,9 @@ CashNinja.Upgrades.prototype.init = function (game_state) {
   // Setting constructors of upgrades. Find possible upgrades in upgrade_classes property (Similar what in JSONLevelState state).
   this.upgrade_classes = {
     "super_blade": CashNinja.SuperBlade.prototype.constructor,
-    "extra_blade": CashNinja.ExtraBlade.prototype.constructor
+    "extra_blade": CashNinja.ExtraBlade.prototype.constructor,
+    "extra_blade2": CashNinja.ExtraBlade.prototype.constructor,
+    "extra_blade3": CashNinja.ExtraBlade.prototype.constructor
   };
 };
 

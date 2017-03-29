@@ -7,10 +7,8 @@ CashNinja.Menu = function (game_state, name, position, properties) {
   this.visible = false; // Make this prefab invisible.
 
   this.menu_items = properties.menu_items; // List of items.
-  this.current_item_index = 0; // Select first item like a current one.
-  this.menu_items[0].selection_over(); // When first item is selected then selection is over.
 
-  this.cursor_keys = this.game_state.game.input.keyboard.createCursorKeys(); // Allow player to navigate through menu items.
+  this.swipe = this.game.input.activePointer; // Allow player to navigate by swiping.
 };
 
 CashNinja.Menu.prototype = Object.create(CashNinja.Prefab.prototype);
@@ -18,29 +16,17 @@ CashNinja.Menu.prototype.constructor = CashNinja.Menu;
 
 CashNinja.Menu.prototype.update = function () {
   "use strict";
-  /**
-   * Select item from menu.
-   */
-  // When up key is pressed.
-  if (this.cursor_keys.up.isDown && this.current_item_index > 0) {
-    // Navigate to previous item.
-    this.menu_items[this.current_item_index].selection_out(); // Unselect current item.
-    this.current_item_index -= 1; // Update current item.
-    this.menu_items[this.current_item_index].selection_over(); // Finish the selection.
-  }
-  // When down key is pressed
-  else if (this.cursor_keys.down.isDown && this.current_item_index < this.menu_items.length -1) {
-    // Navigate to next item.
-    this.menu_items[this.current_item_index].selection_out(); // Unselect current item.
-    this.current_item_index += 1; // Update current item.
-    this.menu_items[this.current_item_index].selection_over(); // Finish the selection.
-  }
 
   /**
-   * Insert selected item from menu.
+   * Choose appropriate menu item.
    */
-  // When spacebar key is pressed.
-  if (this.game_state.game.input.keyboard.isDown(Phaser.Keyboard.SPACEBAR)) {
-    this.menu_items[this.current_item_index].select(); // Select the current item.
+  if (this.swipe.isDown && (this.swipe.position.y >= ((this.game_state.prefabs.game_item.position.y) - 53 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.game_item.position.y)) + 53 / 2) && (this.swipe.position.x >= ((this.game_state.prefabs.game_item.position.x) - 45 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.game_item.position.x)) + 45 / 2)) {
+    this.menu_items[0].select(); // Select first item.
+  }
+  else if (this.swipe.isDown && (this.swipe.position.y >= ((this.game_state.prefabs.store_item.position.y) - 53 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.store_item.position.y)) + 53 / 2) && (this.swipe.position.x >= ((this.game_state.prefabs.store_item.position.x) - 45 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.store_item.position.x)) + 45 / 2)) {
+    this.menu_items[1].select(); // Select second item.
+  }
+  else if (this.swipe.isDown && (this.swipe.position.y >= ((this.game_state.prefabs.button_item_test.position.y) - 53 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.button_item_test.position.y)) + 53 / 2) && (this.swipe.position.x >= ((this.game_state.prefabs.button_item_test.position.x) - 45 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.button_item_test.position.x)) + 45 / 2)) {
+    this.menu_items[2].select(); // Select third item.
   }
 };

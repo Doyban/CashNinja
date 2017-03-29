@@ -1,6 +1,7 @@
 {
   "assets": {
-    "background_image": {"type": "image", "source": "assets/images/background.png"}
+    "background_image": {"type": "image", "source": "assets/images/background.png"},
+    "heart_image": {"type": "image", "source": "assets/images/heart.png"}
   },
   "groups": [
     "background",
@@ -33,11 +34,7 @@
       "type": "start_state_item",
       "position": {"x": 0.5, "y": 0.6},
       "properties": {
-        "text": "Play",
-        "style": {
-          "font": "32px Arial",
-          "fill": "#B51A03"
-        },
+        "texture": "heart_image",
         "group": "menu_items",
         "level_file": "assets/levels/level1.json",
         "state_name": "GameState"
@@ -47,14 +44,20 @@
       "type": "start_state_item",
       "position": {"x": 0.5, "y": 0.7},
       "properties": {
-        "text": "Store",
-        "style": {
-          "font": "32px Arial",
-          "fill": "#B51A03"
-        },
+        "texture": "heart_image",
         "group": "menu_items",
         "level_file": "assets/levels/store.json",
         "state_name": "StoreState"
+      }
+    },
+    "button_item_test": {
+      "type": "start_state_item",
+      "position": {"x": 0.5, "y": 0.8},
+      "properties": {
+        "texture": "heart_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/title_screen.json",
+        "state_name": "TitleState"
       }
     }
   }

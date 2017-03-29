@@ -19,6 +19,9 @@ CashNinja.LoadingState.prototype.preload = function () {
   "use strict";
   var assets, asset_loader, asset_key, asset;
   assets = this.level_data.assets;
+
+  // this.load.image('start', 'assets/images/bomb.png');
+
   // Iterate through all asset.
   for (asset_key in assets) {
     if (assets.hasOwnProperty(asset_key)) {

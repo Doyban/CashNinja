@@ -74,6 +74,38 @@
         "upgrade_properties": {"number_of_blades": 1}
       }
     },
+    "extra_blade2": {
+      "type": "upgrade_item",
+      "position": {"x": 0.3, "y": 0.7},
+      "properties": {
+        "text": "Extra blade 2",
+        "style": {
+          "font": "32px Arial",
+          "fill": "#2F57D0"
+        },
+        "group": "menu_items",
+        "description": "Gets an extra blade, which\n gives one extra life2",
+        "price": 90,
+        "upgrade_type": "extra_blade2",
+        "upgrade_properties": {"number_of_blades": 2}
+      }
+    },
+    "extra_blade3": {
+      "type": "upgrade_item",
+      "position": {"x": 0.3, "y": 0.9},
+      "properties": {
+        "text": "Extra blade 2",
+        "style": {
+          "font": "32px Arial",
+          "fill": "#2F57D0"
+        },
+        "group": "menu_items",
+        "description": "Gets an extra blade, which\n gives one extra life3",
+        "price": 500,
+        "upgrade_type": "extra_blade3",
+        "upgrade_properties": {"number_of_blades": 3}
+      }
+    },
     "upgrade_description": {
       "type": "text",
       "position": {"x": 0.75, "y": 0.3},
