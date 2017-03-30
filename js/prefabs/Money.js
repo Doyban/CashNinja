@@ -10,5 +10,5 @@ CashNinja.Money.prototype.constructor = CashNinja.Money;
 
 CashNinja.Money.prototype.update = function () {
   "use strict";
-  this.text = "Cash: " + localStorage.money; // Show current money of player.
+  this.text = " " + localStorage.money; // Show current money of player.
 };

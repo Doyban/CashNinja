@@ -9,6 +9,7 @@ CashNinja.StoreState = function () {
     "background": CashNinja.Prefab.prototype.constructor,
     "title": CashNinja.TextPrefab.prototype.constructor,
     "money": CashNinja.Money.prototype.constructor,
+    "coin": CashNinja.Prefab.prototype.constructor,
     "text": CashNinja.TextPrefab.prototype.constructor,
     "upgrade_item": CashNinja.UpgradeItem.prototype.constructor
   };

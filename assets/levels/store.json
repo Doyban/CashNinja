@@ -1,6 +1,7 @@
 {
   "assets": {
-    "background_image": {"type": "image", "source": "assets/images/background.png"}
+    "background_image": {"type": "image", "source": "assets/images/background.png"},
+    "heart_image": {"type": "image", "source": "assets/images/hud_coins.png"}
   },
   "groups": [
     "background",
@@ -29,14 +30,23 @@
         "anchor": {"x": 0.5, "y": 0.5}
       }
     },
+    "coin_item": {
+      "type": "coin",
+      "position": {"x": 0.48, "y": 0.95},
+      "properties": {
+        "texture": "heart_image",
+        "group": "hud",
+        "anchor": {"x": 0.5, "y": 0.5}
+      }
+    },
     "money": {
       "type": "money",
-      "position": {"x": 0.5, "y": 0.95},
+      "position": {"x": 0.52, "y": 0.955},
       "properties": {
         "text": "",
         "style": {
-          "font": "32px Arial",
-          "fill": "#E1F50A"
+          "font": "30px Arial",
+          "fill": "#000000"
         },
         "group": "hud",
         "anchor": {"x": 0.5, "y": 0.5}

@@ -27,13 +27,13 @@ CashNinja.Menu.prototype.update = function () {
   else if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.store_item.position.x) - 128 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.store_item.position.x)) + 128 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.store_item.position.y) - 128 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.store_item.position.y)) + 128 / 2)) {
     this.menu_items[1].select(); // Select second item.
   }
-  else if (this.swipe.isDown && (this.swipe.position.y >= (this.swipe.position.x >= ((this.game_state.prefabs.invite_item.position.x) - 128 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.invite_item.position.x)) + 128 / 2) && ((this.game_state.prefabs.invite_item.position.y) - 128 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.invite_item.position.y)) + 128 / 2)) {
+  else if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.invite_item.position.x) - 128 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.invite_item.position.x)) + 128 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.invite_item.position.y) - 128 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.invite_item.position.y)) + 128 / 2)) {
     this.menu_items[2].select(); // Select third item.
   }
   else if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.share_item.position.x) - 128 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.share_item.position.x)) + 128 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.share_item.position.y) - 128 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.share_item.position.y)) + 128 / 2)) {
     this.menu_items[3].select(); // Select fourth item.
   }
-  else if (this.swipe.isDown && (this.swipe.position.y >= (this.swipe.position.x >= ((this.game_state.prefabs.exit_item.position.x) - 128 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.exit_item.position.x)) + 128 / 2) && ((this.game_state.prefabs.exit_item.position.y) - 128 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.exit_item.position.y)) + 128 / 2)) {
+  else if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.exit_item.position.x) - 128 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.exit_item.position.x)) + 128 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.exit_item.position.y) - 128 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.exit_item.position.y)) + 128 / 2)) {
     this.menu_items[4].select(); // Select fifth item.
   }
 };
