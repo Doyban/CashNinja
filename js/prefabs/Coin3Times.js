@@ -28,8 +28,8 @@ CashNinja.Coin3Times.prototype.cut = function () {
   "use strict";
   CashNinja.Cuttable.prototype.cut.call(this); // Extend cut method from Cuttable class.
 
-  this.game_state.score += 2; // Increment score by 2.
-  this.game_state.score += this.game_state.cut_multiplier; // Increase the score by cut multiplier.
+  this.basic_score = 3; // Set up basic score for this coin.
+  this.game_state.score += this.basic_score * this.game_state.cut_multiplier; // Multiply the score by cut multiplier.
   if (!this.kill_timer.running) {
     // If timer isn't running then stop it in the air.
     this.body.allowGravity = false;

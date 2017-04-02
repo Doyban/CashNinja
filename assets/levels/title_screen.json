@@ -3,10 +3,10 @@
     "background_image": {"type": "image", "source": "assets/images/background.png"},
     "heart_image": {"type": "image", "source": "assets/images/heart.png"},
     "exit_image": {"type": "image", "source": "assets/images/black/exit.png"},
-    "invite_image": {"type": "image", "source": "assets/images/topdownTile_40.png"},
+    "invite_image": {"type": "image", "source": "assets/images/invite.png"},
     "play_image": {"type": "image", "source": "assets/images/flatDark41.png"},
-    "share_image": {"type": "image", "source": "assets/images/topdownTile_38.png"},
-    "shop_image": {"type": "image", "source": "assets/images/black/shoppingCart.png"}
+    "share_image": {"type": "image", "source": "assets/images/share.png"},
+    "shop_image": {"type": "image", "source": "assets/images/shop.png"}
   },
   "groups": [
     "background",
@@ -24,7 +24,7 @@
     },
     "title": {
       "type": "title",
-      "position": {"x": 0.5, "y": 0.3},
+      "position": {"x": 0.5, "y": 0.1},
       "properties": {
         "text": "CashNinja",
         "style": {
@@ -37,7 +37,7 @@
     },
     "game_item": {
       "type": "start_state_item",
-      "position": {"x": 0.1, "y": 0.7},
+      "position": {"x": 0.5, "y": 0.5},
       "properties": {
         "texture": "play_image",
         "group": "menu_items",
@@ -47,7 +47,7 @@
     },
     "store_item": {
       "type": "start_state_item",
-      "position": {"x": 0.3, "y": 0.7},
+      "position": {"x": 0.2, "y": 0.7},
       "properties": {
         "texture": "shop_image",
         "group": "menu_items",
@@ -57,7 +57,7 @@
     },
     "invite_item": {
       "type": "start_state_item",
-      "position": {"x": 0.5, "y": 0.7},
+      "position": {"x": 0.4, "y": 0.7},
       "properties": {
         "texture": "invite_image",
         "group": "menu_items",
@@ -67,7 +67,7 @@
     },
     "share_item": {
       "type": "start_state_item",
-      "position": {"x": 0.7, "y": 0.7},
+      "position": {"x": 0.6, "y": 0.7},
       "properties": {
         "texture": "share_image",
         "group": "menu_items",
@@ -77,7 +77,7 @@
     },
     "exit_item": {
       "type": "start_state_item",
-      "position": {"x": 0.9, "y": 0.7},
+      "position": {"x": 0.8, "y": 0.7},
       "properties": {
         "texture": "exit_image",
         "group": "menu_items",

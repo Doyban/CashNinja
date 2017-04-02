@@ -1,7 +1,12 @@
 {
   "assets": {
     "background_image": {"type": "image", "source": "assets/images/background.png"},
-    "heart_image": {"type": "image", "source": "assets/images/hud_coins.png"}
+    "coin_image": {"type": "image", "source": "assets/images/coin.png"},
+    "heart_image": {"type": "image", "source": "assets/images/heart.png"},
+    "iron_sword_image": {"type": "image", "source": "assets/images/sword_iron.png"},
+    "silver_sword_image": {"type": "image", "source": "assets/images/sword_silver.png"},
+    "gold_sword_image": {"type": "image", "source": "assets/images/sword_gold.png"},
+    "diamond_sword_image": {"type": "image", "source": "assets/images/sword_diamond.png"}
   },
   "groups": [
     "background",
@@ -34,7 +39,7 @@
       "type": "coin",
       "position": {"x": 0.48, "y": 0.95},
       "properties": {
-        "texture": "heart_image",
+        "texture": "coin_image",
         "group": "hud",
         "anchor": {"x": 0.5, "y": 0.5}
       }
@@ -52,94 +57,92 @@
         "anchor": {"x": 0.5, "y": 0.5}
       }
     },
-    "super_blade": {
+    "silver_sword_item": {
+      "type": "upgrade_item",
+      "position": {"x": 0.1, "y": 0.3},
+      "properties": {
+        "texture": "silver_sword_image",
+        "group": "menu_items",
+        "price": 100,
+        "upgrade_type": "super_blade",
+        "upgrade_properties": {"cut_multiplier": 2},
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
+      }
+    },
+    "gold_sword_item": {
       "type": "upgrade_item",
       "position": {"x": 0.3, "y": 0.3},
       "properties": {
-        "text": "Super blade",
-        "style": {
-          "font": "32px Arial",
-          "fill": "#2F57D0"
-        },
+        "texture": "gold_sword_image",
         "group": "menu_items",
-        "description": "A super blade that gives one\n extra point for each coin",
         "price": 100,
         "upgrade_type": "super_blade",
-        "upgrade_properties": {"cut_multiplier": 2}
+        "upgrade_properties": {"cut_multiplier": 3},
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
       }
     },
-    "extra_blade": {
+    "diamond_sword_item": {
       "type": "upgrade_item",
-      "position": {"x": 0.3, "y": 0.5},
+      "position": {"x": 0.5, "y": 0.3},
       "properties": {
-        "text": "Extra blade",
-        "style": {
-          "font": "32px Arial",
-          "fill": "#2F57D0"
-        },
+        "texture": "diamond_sword_image",
         "group": "menu_items",
-        "description": "Gets an extra blade, which\n gives one extra life",
-        "price": 50,
-        "upgrade_type": "extra_blade",
-        "upgrade_properties": {"number_of_blades": 1}
+        "price": 100,
+        "upgrade_type": "super_blade",
+        "upgrade_properties": {"cut_multiplier": 6},
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
       }
     },
-    "extra_blade2": {
+    "one_heart": {
+      "type": "upgrade_item",
+      "position": {"x": 0.1, "y": 0.7},
+      "properties": {
+        "texture": "heart_image",
+        "group": "menu_items",
+        "price": 50,
+        "upgrade_type": "extra_heart",
+        "upgrade_properties": {"number_of_hearts": 1},
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
+      }
+    },
+    "three_hearts": {
       "type": "upgrade_item",
       "position": {"x": 0.3, "y": 0.7},
       "properties": {
-        "text": "Extra blade 2",
-        "style": {
-          "font": "32px Arial",
-          "fill": "#2F57D0"
-        },
+        "texture": "heart_image",
         "group": "menu_items",
-        "description": "Gets an extra blade, which\n gives one extra life2",
         "price": 90,
-        "upgrade_type": "extra_blade2",
-        "upgrade_properties": {"number_of_blades": 2}
+        "upgrade_type": "extra_heart",
+        "upgrade_properties": {"number_of_hearts": 3},
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
       }
     },
-    "extra_blade3": {
+    "five_hearts": {
       "type": "upgrade_item",
-      "position": {"x": 0.3, "y": 0.9},
+      "position": {"x": 0.5, "y": 0.7},
       "properties": {
-        "text": "Extra blade 2",
-        "style": {
-          "font": "32px Arial",
-          "fill": "#2F57D0"
-        },
+        "texture": "heart_image",
         "group": "menu_items",
-        "description": "Gets an extra blade, which\n gives one extra life3",
         "price": 500,
-        "upgrade_type": "extra_blade3",
-        "upgrade_properties": {"number_of_blades": 3}
+        "upgrade_type": "extra_heart",
+        "upgrade_properties": {"number_of_hearts": 5},
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
       }
     },
-    "upgrade_description": {
-      "type": "text",
-      "position": {"x": 0.75, "y": 0.3},
+    "iron_sword_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.8, "y": 0.5},
       "properties": {
-        "text": "Description",
-        "style": {
-          "font": "32px Arial",
-          "fill": "#333"
-        },
-        "group": "hud",
-        "anchor": {"x": 0.5, "y": 0.5}
-      }
-    },
-    "upgrade_price": {
-      "type": "text",
-      "position": {"x": 0.75, "y": 0.6},
-      "properties": {
-        "text": "Price",
-        "style": {
-          "font": "32px Arial",
-          "fill": "#333"
-        },
-        "group": "hud",
-        "anchor": {"x": 0.5, "y": 0.5}
+        "texture": "iron_sword_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
       }
     }
   }
