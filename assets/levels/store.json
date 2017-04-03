@@ -3,9 +3,9 @@
     "background_image": {"type": "image", "source": "assets/images/background.png"},
     "coin_image": {"type": "image", "source": "assets/images/coin.png"},
     "heart_image": {"type": "image", "source": "assets/images/heart.png"},
-    "one_heart_image": {"type": "image", "source": "assets/images/one_heart2.png"},
-    "three_hearts_image": {"type": "image", "source": "assets/images/three_hearts2.png"},
-    "five_hearts_image": {"type": "image", "source": "assets/images/five_hearts2.png"},
+    "one_heart_image": {"type": "image", "source": "assets/images/one_heart.png"},
+    "three_hearts_image": {"type": "image", "source": "assets/images/three_hearts.png"},
+    "five_hearts_image": {"type": "image", "source": "assets/images/five_hearts.png"},
     "iron_sword_image": {"type": "image", "source": "assets/images/sword_iron.png"},
     "silver_sword_image": {"type": "image", "source": "assets/images/sword_silver.png"},
     "gold_sword_image": {"type": "image", "source": "assets/images/sword_gold.png"},
@@ -31,8 +31,8 @@
       "properties": {
         "text": "Store",
         "style": {
-          "font": "48px Times New Roman",
-          "fill": "#887731"
+          "font": "48px Futura",
+          "fill": "#FF9912"
         },
         "group": "hud",
         "anchor": {"x": 0.5, "y": 0.5}
@@ -100,7 +100,7 @@
     },
     "one_heart": {
       "type": "upgrade_item",
-      "position": {"x": 0.1, "y": 0.711},
+      "position": {"x": 0.1, "y": 0.729},
       "properties": {
         "texture": "one_heart_image",
         "group": "menu_items",
@@ -113,7 +113,7 @@
     },
     "three_hearts": {
       "type": "upgrade_item",
-      "position": {"x": 0.3, "y": 0.7},
+      "position": {"x": 0.3, "y": 0.706},
       "properties": {
         "texture": "three_hearts_image",
         "group": "menu_items",
@@ -126,7 +126,7 @@
     },
     "five_hearts": {
       "type": "upgrade_item",
-      "position": {"x": 0.5, "y": 0.7},
+      "position": {"x": 0.5, "y": 0.71},
       "properties": {
         "texture": "five_hearts_image",
         "group": "menu_items",

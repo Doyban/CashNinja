@@ -30,8 +30,8 @@
       "properties": {
         "text": "Coins: ",
         "style": {
-          "font": "48px Times New Roman",
-          "fill": "#887731"
+          "font": "48px Futura",
+          "fill": "#FF9912"
         },
         "group": "hud"
       }

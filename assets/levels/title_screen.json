@@ -28,8 +28,8 @@
       "properties": {
         "text": "CashNinja",
         "style": {
-          "font": "72px Times New Roman",
-          "fill": "#887731"
+          "font": "72px Futura",
+          "fill": "#FF9912"
         },
         "group": "hud",
         "anchor": {"x": 0.5, "y": 0.5}
