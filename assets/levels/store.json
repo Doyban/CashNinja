@@ -3,6 +3,9 @@
     "background_image": {"type": "image", "source": "assets/images/background.png"},
     "coin_image": {"type": "image", "source": "assets/images/coin.png"},
     "heart_image": {"type": "image", "source": "assets/images/heart.png"},
+    "one_heart_image": {"type": "image", "source": "assets/images/one_heart2.png"},
+    "three_hearts_image": {"type": "image", "source": "assets/images/three_hearts2.png"},
+    "five_hearts_image": {"type": "image", "source": "assets/images/five_hearts2.png"},
     "iron_sword_image": {"type": "image", "source": "assets/images/sword_iron.png"},
     "silver_sword_image": {"type": "image", "source": "assets/images/sword_silver.png"},
     "gold_sword_image": {"type": "image", "source": "assets/images/sword_gold.png"},
@@ -28,8 +31,8 @@
       "properties": {
         "text": "Store",
         "style": {
-          "font": "48px Arial",
-          "fill": "#E99F16"
+          "font": "48px Times New Roman",
+          "fill": "#887731"
         },
         "group": "hud",
         "anchor": {"x": 0.5, "y": 0.5}
@@ -46,15 +49,14 @@
     },
     "money": {
       "type": "money",
-      "position": {"x": 0.52, "y": 0.955},
+      "position": {"x": 0.5, "y": 0.93},
       "properties": {
         "text": "",
         "style": {
-          "font": "30px Arial",
-          "fill": "#000000"
+          "font": "30px Times New Roman",
+          "fill": "#887731"
         },
-        "group": "hud",
-        "anchor": {"x": 0.5, "y": 0.5}
+        "group": "hud"
       }
     },
     "silver_sword_item": {
@@ -63,7 +65,7 @@
       "properties": {
         "texture": "silver_sword_image",
         "group": "menu_items",
-        "price": 100,
+        "price": 15000,
         "upgrade_type": "super_blade",
         "upgrade_properties": {"cut_multiplier": 2},
         "level_file": "assets/levels/level1.json",
@@ -76,7 +78,7 @@
       "properties": {
         "texture": "gold_sword_image",
         "group": "menu_items",
-        "price": 100,
+        "price": 20000,
         "upgrade_type": "super_blade",
         "upgrade_properties": {"cut_multiplier": 3},
         "level_file": "assets/levels/level1.json",
@@ -89,7 +91,7 @@
       "properties": {
         "texture": "diamond_sword_image",
         "group": "menu_items",
-        "price": 100,
+        "price": 30000,
         "upgrade_type": "super_blade",
         "upgrade_properties": {"cut_multiplier": 6},
         "level_file": "assets/levels/level1.json",
@@ -98,11 +100,11 @@
     },
     "one_heart": {
       "type": "upgrade_item",
-      "position": {"x": 0.1, "y": 0.7},
+      "position": {"x": 0.1, "y": 0.711},
       "properties": {
-        "texture": "heart_image",
+        "texture": "one_heart_image",
         "group": "menu_items",
-        "price": 50,
+        "price": 5000,
         "upgrade_type": "extra_heart",
         "upgrade_properties": {"number_of_hearts": 1},
         "level_file": "assets/levels/level1.json",
@@ -113,9 +115,9 @@
       "type": "upgrade_item",
       "position": {"x": 0.3, "y": 0.7},
       "properties": {
-        "texture": "heart_image",
+        "texture": "three_hearts_image",
         "group": "menu_items",
-        "price": 90,
+        "price": 10000,
         "upgrade_type": "extra_heart",
         "upgrade_properties": {"number_of_hearts": 3},
         "level_file": "assets/levels/level1.json",
@@ -126,9 +128,9 @@
       "type": "upgrade_item",
       "position": {"x": 0.5, "y": 0.7},
       "properties": {
-        "texture": "heart_image",
+        "texture": "five_hearts_image",
         "group": "menu_items",
-        "price": 500,
+        "price": 15000,
         "upgrade_type": "extra_heart",
         "upgrade_properties": {"number_of_hearts": 5},
         "level_file": "assets/levels/level1.json",

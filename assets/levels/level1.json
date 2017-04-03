@@ -4,7 +4,7 @@
     "heart_image": {"type": "image", "source": "assets/images/heart.png"},
     "bomb_image": {"type": "image", "source": "assets/images/bomb.png"},
     "background_image": {"type": "image", "source": "assets/images/background.png"},
-    "coins_spritesheet": {"type": "spritesheet", "source": "assets/images/coins.png", "frame_width": 24, "frame_height": 24}
+    "coins_spritesheet": {"type": "spritesheet", "source": "assets/images/coins.png", "frame_width": 20, "frame_height": 20}
   },
   "groups": [
     "background",
@@ -28,10 +28,10 @@
       "type": "score",
       "position": {"x": 0.05, "y": 0.05},
       "properties": {
-        "text": "Cash: ",
+        "text": "Coins: ",
         "style": {
-          "font": "48px Arial",
-          "fill": "#E99F16"
+          "font": "48px Times New Roman",
+          "fill": "#887731"
         },
         "group": "hud"
       }

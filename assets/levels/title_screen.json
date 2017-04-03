@@ -4,7 +4,7 @@
     "heart_image": {"type": "image", "source": "assets/images/heart.png"},
     "exit_image": {"type": "image", "source": "assets/images/black/exit.png"},
     "invite_image": {"type": "image", "source": "assets/images/invite.png"},
-    "play_image": {"type": "image", "source": "assets/images/flatDark41.png"},
+    "play_image": {"type": "image", "source": "assets/images/start.png"},
     "share_image": {"type": "image", "source": "assets/images/share.png"},
     "shop_image": {"type": "image", "source": "assets/images/shop.png"}
   },
@@ -28,8 +28,8 @@
       "properties": {
         "text": "CashNinja",
         "style": {
-          "font": "72px Arial",
-          "fill": "#C39D3C"
+          "font": "72px Times New Roman",
+          "fill": "#887731"
         },
         "group": "hud",
         "anchor": {"x": 0.5, "y": 0.5}

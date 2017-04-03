@@ -10,5 +10,5 @@ CashNinja.Score.prototype.constructor = CashNinja.Score;
 
 CashNinja.Score.prototype.update = function () {
   "use strict";
-  this.text = "Score: " + this.game_state.score; // Display score.
+  this.text = "Coins: " + this.game_state.score; // Display score.
 };
