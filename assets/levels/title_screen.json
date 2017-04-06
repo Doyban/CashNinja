@@ -41,8 +41,8 @@
       "properties": {
         "texture": "play_image",
         "group": "menu_items",
-        "level_file": "assets/levels/level1.json",
-        "state_name": "GameState"
+        "level_file": "assets/levels/store.json",
+        "state_name": "StoreState"
       }
     },
     "store_item": {
