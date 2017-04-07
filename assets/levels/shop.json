@@ -1,0 +1,121 @@
+{
+  "assets": {
+    "background_image": {"type": "image", "source": "assets/images/background.png"},
+    "coin_image": {"type": "image", "source": "assets/images/coin.png"},
+    "coins_20k_image": {"type": "image", "source": "assets/images/coins_20k.png"},
+    "coins_100k_image": {"type": "image", "source": "assets/images/coins_100k.png"},
+    "coins_400k_image": {"type": "image", "source": "assets/images/coins_400k.png"},
+    "coins_1_5M_image": {"type": "image", "source": "assets/images/coins_1.5M.png"},
+    "coins_7M_image": {"type": "image", "source": "assets/images/coins_7M.png"},
+    "home_image": {"type": "image", "source": "assets/images/home.png"}
+  },
+  "groups": [
+    "background",
+    "hud",
+    "menu_items"
+  ],
+  "prefabs": {
+    "background": {
+      "type": "background",
+      "position": {"x": 0, "y": 0},
+      "properties": {
+        "texture": "background_image",
+        "group": "background"
+      }
+    },
+    "title": {
+      "type": "title",
+      "position": {"x": 0.5, "y": 0.1},
+      "properties": {
+        "text": "Shop",
+        "style": {
+          "font": "48px Futura",
+          "fill": "#FF9912"
+        },
+        "group": "hud",
+        "anchor": {"x": 0.5, "y": 0.5}
+      }
+    },
+    "coin_item": {
+      "type": "coin",
+      "position": {"x": 0.45, "y": 0.95},
+      "properties": {
+        "texture": "coin_image",
+        "group": "hud",
+        "anchor": {"x": 0.5, "y": 0.5}
+      }
+    },
+    "money": {
+      "type": "money",
+      "position": {"x": 0.47, "y": 0.93},
+      "properties": {
+        "text": "",
+        "style": {
+          "font": "30px Times New Roman",
+          "fill": "#887731"
+        },
+        "group": "hud"
+      }
+    },
+    "coins_20k_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.1, "y": 0.45},
+      "properties": {
+        "texture": "coins_20k_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/store.json",
+        "state_name": "StoreState"
+      }
+    },
+    "coins_100k_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.3, "y": 0.45},
+      "properties": {
+        "texture": "coins_100k_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/store.json",
+        "state_name": "StoreState"
+      }
+    },
+    "coins_400k_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.5, "y": 0.45},
+      "properties": {
+        "texture": "coins_400k_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/title_screen.json",
+        "state_name": "TitleState"
+      }
+    },
+    "coins_1_5M_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.7, "y": 0.45},
+      "properties": {
+        "texture": "coins_1_5M_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/title_screen.json",
+        "state_name": "TitleState"
+      }
+    },
+    "coins_7M_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.9, "y": 0.45},
+      "properties": {
+        "texture": "coins_7M_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/title_screen.json",
+        "state_name": "TitleState"
+      }
+    },
+    "home_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.5, "y": 0.83},
+      "properties": {
+        "texture": "home_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/title_screen.json",
+        "state_name": "TitleState"
+      }
+    }
+  }
+}
