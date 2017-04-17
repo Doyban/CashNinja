@@ -33,7 +33,7 @@ CashNinja.Menu.prototype.update = function () {
   else if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.share_item.position.x) - 100 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.share_item.position.x)) + 100 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.share_item.position.y) - 100 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.share_item.position.y)) + 100 / 2)) {
     this.menu_items[3].select(); // Select fourth item.
   }
-  else if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.exit_item.position.x) - 128 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.exit_item.position.x)) + 128 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.exit_item.position.y) - 128 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.exit_item.position.y)) + 128 / 2)) {
+  else if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.exit_item.position.x) - 87 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.exit_item.position.x)) + 87 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.exit_item.position.y) - 100 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.exit_item.position.y)) + 100 / 2)) {
     this.menu_items[4].select(); // Select fifth item.
   }
 };

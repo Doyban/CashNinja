@@ -21,7 +21,6 @@ CashNinja.MenuShop.prototype.update = function () {
    * Choose appropriate menu item.
    * To get action on whole item dimensions while swiping, item needs to be get from anchor of itself and substract & add half of width & height to it, then whole item dimensions are on action for swiping.
    */
-  // TODO: Customize width & height to images.
   if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.coins_20k_item.position.x) - 204 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.coins_20k_item.position.x)) + 204 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.coins_20k_item.position.y) - 324 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.coins_20k_item.position.y)) + 324 / 2)) {
     this.menu_items[0].select(); // Select first item.
   }

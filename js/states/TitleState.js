@@ -28,7 +28,6 @@ CashNinja.TitleState.prototype.create = function () {
   menu_properties = {texture: "", group: "background", menu_items: menu_items}; // Set properties of the menu.
   menu = new CashNinja.Menu(this, "menu", menu_position, menu_properties); // Create menu.
 
-  // TODO: Change localStorage.money to 5000 before publishing
-  localStorage.money = localStorage.money || 1000000; // Initialize localStorage money.
+  localStorage.money = localStorage.money || 5000; // Initialize localStorage money.
   this.game.current_upgrades = this.game.current_upgrades || []; // Initialize current upgrades.
 };

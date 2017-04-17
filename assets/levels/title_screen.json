@@ -2,7 +2,7 @@
   "assets": {
     "background_image": {"type": "image", "source": "assets/images/background.png"},
     "heart_image": {"type": "image", "source": "assets/images/heart.png"},
-    "exit_image": {"type": "image", "source": "assets/images/black/exit.png"},
+    "exit_image": {"type": "image", "source": "assets/images/exit.png"},
     "invite_image": {"type": "image", "source": "assets/images/invite.png"},
     "play_image": {"type": "image", "source": "assets/images/start.png"},
     "share_image": {"type": "image", "source": "assets/images/share.png"},
