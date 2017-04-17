@@ -28,7 +28,7 @@
       "type": "score",
       "position": {"x": 0.05, "y": 0.05},
       "properties": {
-        "text": "Coins: ",
+        "text": "Score: ",
         "style": {
           "font": "48px Futura",
           "fill": "#FF9912"

@@ -22,6 +22,7 @@ CashNinja.UpgradeItem.prototype.constructor = CashNinja.UpgradeItem;
 
 CashNinja.UpgradeItem.prototype.select = function () {
   "use strict";
+  // TODO: Display alert if there is not enough money.
   // Player can buy upgrades only ones per game and if has enough money.
   if (!this.selected && localStorage.money >= this.price) {
     localStorage.money -= this.price; // Decrease price of item from current money of player.

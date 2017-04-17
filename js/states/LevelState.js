@@ -102,11 +102,11 @@ CashNinja.LevelState.prototype.check_collision = function (object) {
   }
 };
 
-// Game over - restart the game.
+// Game over.
 CashNinja.LevelState.prototype.game_over = function () {
   "use strict";
-  // this.game_state.restart(true, false, this.level_data);
-  this.game.state.start("BootState", true, false, "assets/levels/title_screen.json", "TitleState");
+  // this.game.state.start("BootState", true, false, "assets/levels/game_over.json", "GameOverState"); // Go to GameOverState. // TODO: Implement GameOverState with availability to share and back to main menu.
+  this.game.state.start("BootState", true, false, "assets/levels/title_screen.json", "TitleState"); // Go to GameOverState.
 
   localStorage.money = parseInt(localStorage.money) + this.score; // Increase player money with the score of the game.
   this.game.current_upgrades = []; // Clean game upgrades.
