@@ -22,13 +22,16 @@ CashNinja.UpgradeItem.prototype.constructor = CashNinja.UpgradeItem;
 
 CashNinja.UpgradeItem.prototype.select = function () {
   "use strict";
-  // TODO: Display alert if there is not enough money.
   // Player can buy upgrades only ones per game and if has enough money.
   if (!this.selected && localStorage.money >= this.price) {
+    // Buy upgrade.
     localStorage.money -= this.price; // Decrease price of item from current money of player.
     this.game_state.game.current_upgrades.push({type: this.upgrade_type, properties: this.upgrade_properties}); // Push upgrade type & upgrade properties to the current upgrades.
     this.selected = true; // Player bought upgrade in this game, upgrade is selected.
-  }
 
-  this.game_state.state.start("BootState", true, false, this.level_file, this.state_name); // Start next Phaser state.
+    this.game_state.state.start("BootState", true, false, this.level_file, this.state_name); // Start next Phaser state.
+  } else {
+    // Not enough coins to buy upgrade.
+    alert("You don't have enough coins to buy this upgrade.")
+  }
 };
