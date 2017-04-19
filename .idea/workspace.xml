@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="997fa845-3155-41b7-b695-072abc53654d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/facebook.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/states/FacebookState.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/._exit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/images/exit.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/levels/shop.json" afterPath="$PROJECT_DIR$/assets/levels/shop.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/levels/title_screen.json" afterPath="$PROJECT_DIR$/assets/levels/title_screen.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/prefabs/Menu.js" afterPath="$PROJECT_DIR$/js/prefabs/Menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/prefabs/MenuShop.js" afterPath="$PROJECT_DIR$/js/prefabs/MenuShop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/states/LevelState.js" afterPath="$PROJECT_DIR$/js/states/LevelState.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/states/LoadingState.js" afterPath="$PROJECT_DIR$/js/states/LoadingState.js" />
-    </list>
+    <list default="true" id="997fa845-3155-41b7-b695-072abc53654d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -483,12 +469,12 @@
       <workItem from="1492494345151" duration="11790000" />
       <workItem from="1492517161161" duration="350000" />
       <workItem from="1492532915208" duration="6416000" />
-      <workItem from="1492595785034" duration="9630000" />
+      <workItem from="1492595785034" duration="9742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75325000" />
+    <option name="totallyTimeSpent" value="75437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-32" width="2560" height="1440" extended-state="0" />
@@ -503,7 +489,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21679828" sideWeight="0.49722221" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21679828" sideWeight="0.49722221" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
