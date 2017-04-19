@@ -63,8 +63,8 @@
       "properties": {
         "texture": "coins_20k_image",
         "group": "menu_items",
-        "level_file": "assets/levels/store.json",
-        "state_name": "StoreState"
+        "level_file": "assets/levels/shop.json",
+        "state_name": "ShopState"
       }
     },
     "coins_100k_item": {
@@ -73,8 +73,8 @@
       "properties": {
         "texture": "coins_100k_image",
         "group": "menu_items",
-        "level_file": "assets/levels/store.json",
-        "state_name": "StoreState"
+        "level_file": "assets/levels/shop.json",
+        "state_name": "ShopState"
       }
     },
     "coins_400k_item": {
@@ -83,8 +83,8 @@
       "properties": {
         "texture": "coins_400k_image",
         "group": "menu_items",
-        "level_file": "assets/levels/title_screen.json",
-        "state_name": "TitleState"
+        "level_file": "assets/levels/shop.json",
+        "state_name": "ShopState"
       }
     },
     "coins_1_5M_item": {
@@ -93,8 +93,8 @@
       "properties": {
         "texture": "coins_1_5M_image",
         "group": "menu_items",
-        "level_file": "assets/levels/title_screen.json",
-        "state_name": "TitleState"
+        "level_file": "assets/levels/shop.json",
+        "state_name": "ShopState"
       }
     },
     "coins_7M_item": {
@@ -103,8 +103,8 @@
       "properties": {
         "texture": "coins_7M_image",
         "group": "menu_items",
-        "level_file": "assets/levels/title_screen.json",
-        "state_name": "TitleState"
+        "level_file": "assets/levels/shop.json",
+        "state_name": "ShopState"
       }
     },
     "home_item": {

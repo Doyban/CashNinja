@@ -17,10 +17,9 @@ CashNinja.LoadingState.prototype.init = function (level_data, next_state) {
 
 CashNinja.LoadingState.prototype.preload = function () {
   "use strict";
+
   var assets, asset_loader, asset_key, asset;
   assets = this.level_data.assets;
-
-  // this.load.image('start', 'assets/images/bomb.png');
 
   // Iterate through all asset.
   for (asset_key in assets) {
@@ -41,6 +40,5 @@ CashNinja.LoadingState.prototype.preload = function () {
 
 CashNinja.LoadingState.prototype.create = function () {
   "use strict";
-  // this.game.state.start("GameState", true, false, this.level_data); // Start GameState state.
   this.game.state.start(this.next_state, true, false, this.level_data); // Start next level state.
 };

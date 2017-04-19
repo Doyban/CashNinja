@@ -20,5 +20,6 @@ game.state.add("StoreState", new CashNinja.StoreState());
 game.state.add("ShopState", new CashNinja.ShopState());
 game.state.add("GameOverState", new CashNinja.GameOverState());
 game.state.add("FirebaseState", new CashNinja.FirebaseState());
+game.state.add("FacebookState", new CashNinja.FacebookState());
 game.state.start("BootState", true, false, "assets/levels/title_screen.json", "TitleState");
 // game.state.start("FirebaseState");

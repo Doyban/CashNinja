@@ -96,7 +96,7 @@ CashNinja.LevelState.prototype.check_collision = function (object) {
   line3 = new Phaser.Line(object_rectangle.right, object_rectangle.top, object_rectangle.right, object_rectangle.bottom);
   line4 = new Phaser.Line(object_rectangle.right, object_rectangle.bottom, object_rectangle.left, object_rectangle.bottom);
 
-  intersection = this.swipe.intersects(line1) || this.swipe.intersects(line2) || this.swipe.intersects(line3) || this.swipe.intersects(line4); // Check intersection between two lines (cuttable object rectangular edge and siwpe).
+  intersection = this.swipe.intersects(line1) || this.swipe.intersects(line2) || this.swipe.intersects(line3) || this.swipe.intersects(line4); // Check intersection between two lines (cuttable object rectangular edge and swipe).
   if (intersection) {
     object.cut(); // If there was intersection then cut the cuttable object.
   }
@@ -108,6 +108,7 @@ CashNinja.LevelState.prototype.game_over = function () {
   // this.game.state.start("BootState", true, false, "assets/levels/game_over.json", "GameOverState"); // Go to GameOverState. // TODO: Implement GameOverState with availability to share and back to main menu.
   this.game.state.start("BootState", true, false, "assets/levels/title_screen.json", "TitleState"); // Go to GameOverState.
 
+  // TODO: Replace with Firebase.
   localStorage.money = parseInt(localStorage.money) + this.score; // Increase player money with the score of the game.
   this.game.current_upgrades = []; // Clean game upgrades.
 };
