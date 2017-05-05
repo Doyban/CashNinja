@@ -12,7 +12,7 @@ CashNinja.Coin = function (game_state, name, position, properties) {
 
   this.frame = this.frames[frame_index];
 
-  this.body.setSize(20, 20); // Physical body of Coin.
+  this.body.setSize(12, 12); // Physical body of Coin.
 };
 
 CashNinja.Coin.prototype = Object.create(CashNinja.Cuttable.prototype);

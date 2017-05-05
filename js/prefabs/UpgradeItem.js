@@ -32,6 +32,7 @@ CashNinja.UpgradeItem.prototype.select = function () {
     this.game_state.state.start("BootState", true, false, this.level_file, this.state_name); // Start next Phaser state.
   } else {
     // Not enough coins to buy upgrade.
-    alert("You don't have enough coins to buy this upgrade.")
+    alert("You don't have enough coins to buy this upgrade.");
+    this.game_state.state.start("BootState", true, false, "assets/levels/store.json", "StoreState"); // Start next Phaser state.
   }
 };

@@ -25,7 +25,7 @@
       "properties": {
         "text": "Game Over",
         "style": {
-          "font": "48px Futura",
+          "font": "32px Futura",
           "fill": "#FF9912"
         },
         "group": "hud",
@@ -38,7 +38,7 @@
       "properties": {
         "text": "Score: ",
         "style": {
-          "font": "32px Futura",
+          "font": "24px Futura",
           "fill": "#FF9912"
         },
         "group": "hud",

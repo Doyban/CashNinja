@@ -70,14 +70,20 @@
   <script src="js/upgrades/SuperBlade.js"></script>
 
   <script src="js/main.js"></script>
+  <script src="js/ads.js"></script>
   <!-- phantom library, needed for Cordova api calls, added during build -->
-  <!--<script src="cordova.js"></script>-->
+  <script src="cordova.js"></script>
 
   <!-- recommended location of your JavaScript code relative to other JS files -->
-  <!--<script src="xdk/init-dev.js"></script>-->
-  <!-- normalizes device and document ready events, see README for details -->
+  <script src="xdk/init-dev.js"></script>
+  <!-- for your event code, see README and file comments for details -->
+  <script src="src/init-app.js"></script>
+  <!-- normalizes device and document ready events, see file for details -->
+  <script src="js/util.js"></script>
 </head>
 
 <body>
+  <!-- Required to invite Facebook friends. -->
+  <div id="fb-root"></div>
 </body>
 </html>

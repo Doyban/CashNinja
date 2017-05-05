@@ -4,7 +4,7 @@ CashNinja.Bomb = function (game_state, name, position, properties) {
   "use strict";
   CashNinja.Cuttable.call(this, game_state, name, position, properties); // Extend Cuttable class.
 
-  this.body.setSize(20, 20); // Physical body of bomb.
+  this.body.setSize(16, 16); // Physical body of bomb.
 };
 
 CashNinja.Bomb.prototype = Object.create(CashNinja.Cuttable.prototype);

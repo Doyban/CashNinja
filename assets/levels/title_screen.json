@@ -28,7 +28,7 @@
       "properties": {
         "text": "CashNinja",
         "style": {
-          "font": "72px Futura",
+          "font": "48px Futura",
           "fill": "#FF9912"
         },
         "group": "hud",
@@ -37,7 +37,7 @@
     },
     "game_item": {
       "type": "start_state_item",
-      "position": {"x": 0.5, "y": 0.5},
+      "position": {"x": 0.5, "y": 0.4},
       "properties": {
         "texture": "play_image",
         "group": "menu_items",
