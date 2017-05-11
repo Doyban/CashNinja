@@ -17,6 +17,13 @@ CashNinja.LoadingState.prototype.init = function (level_data, next_state) {
 
 CashNinja.LoadingState.prototype.preload = function () {
   "use strict";
+  // Load images for menu.
+  this.load.image('exit', 'assets/images/exit.png', 48, 55);
+  this.load.image('invite', 'assets/images/invite.png', 48, 48);
+  this.load.image('share', 'assets/images/share.png', 48, 48);
+  this.load.image('shop', 'assets/images/shop.png', 48, 48);
+  this.load.image('start', 'assets/images/start.png', 140, 62);
+  
   var assets, asset_loader, asset_key, asset;
   assets = this.level_data.assets;
 
