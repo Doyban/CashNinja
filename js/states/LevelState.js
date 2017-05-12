@@ -41,6 +41,8 @@ CashNinja.LevelState.prototype.init = function (level_data) {
 
   this.score = 0; // Initialize score with default value of 0.
   this.cut_multiplier = 1; // Initialize cut multiplier as 1.
+
+  this.gameOverSound = this.game.add.audio('game_over'); // Add game over sound.
 };
 
 // Create games prefabs.
@@ -111,5 +113,6 @@ CashNinja.LevelState.prototype.game_over = function () {
   // TODO: Replace with Firebase.
   localStorage.money = parseInt(localStorage.money) + this.score; // Increase player money with the score of the game.
   this.game.current_upgrades = []; // Clean game upgrades.
-};
 
+  this.gameOverSound.play(); // Play game over sound.
+};
