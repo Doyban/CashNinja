@@ -5,6 +5,7 @@ CashNinja.Bomb = function (game_state, name, position, properties) {
   CashNinja.Cuttable.call(this, game_state, name, position, properties); // Extend Cuttable class.
 
   this.body.setSize(16, 16); // Physical body of bomb.
+  this.hitBombSound = this.game.add.audio('hit_bomb'); // Add hit bomb sound.
 };
 
 CashNinja.Bomb.prototype = Object.create(CashNinja.Cuttable.prototype);
@@ -16,4 +17,5 @@ CashNinja.Bomb.prototype.cut = function () {
 
   this.game_state.prefabs.lives.die(); // Decrease number of lives by 1.
   this.kill(); // Make coin kill itself.
+  this.hitBombSound.play(); // Play hit bomb sound.
 };

@@ -11,6 +11,7 @@ CashNinja.Coin3Times = function (game_state, name, position, properties) {
    * @type {*}
    */
   this.kill_timer = this.game_state.game.time.create(false); // Create timer, which will be used to kill the coin when it is cut.
+  this.hitCoinSound = this.game.add.audio('hit_coin'); // Add hit coin sound.
 };
 
 CashNinja.Coin3Times.prototype = Object.create(CashNinja.Cuttable.prototype);
@@ -31,4 +32,5 @@ CashNinja.Coin3Times.prototype.cut = function () {
   this.basic_score = 3; // Set up basic score for this coin.
   this.game_state.score += this.basic_score * this.game_state.cut_multiplier; // Multiply the score by cut multiplier.
   this.kill(); // Make coin kill itself.
+  this.hitCoinSound.play(); // Play hit coin sound.
 };

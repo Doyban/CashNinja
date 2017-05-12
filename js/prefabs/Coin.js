@@ -13,6 +13,8 @@ CashNinja.Coin = function (game_state, name, position, properties) {
   this.frame = this.frames[frame_index];
 
   this.body.setSize(12, 12); // Physical body of Coin.
+  
+  this.hitCoinSound = this.game.add.audio('hit_coin'); // Add hit coin sound.
 };
 
 CashNinja.Coin.prototype = Object.create(CashNinja.Cuttable.prototype);
@@ -35,4 +37,5 @@ CashNinja.Coin.prototype.cut = function () {
   this.basic_score = 1; // Set up basic score for this coin.
   this.game_state.score += this.basic_score * this.game_state.cut_multiplier; // Multiply the score by cut multiplier.
   this.kill(); // Make coin kill itself.
+  this.hitCoinSound.play(); // Play hit coin sound.
 };
