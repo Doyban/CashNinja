@@ -55,7 +55,7 @@
         "pool": "coins",
         "spawn_time": {"min": 1, "max": 2},
         "velocity_x": {"min": -100, "max": 100},
-        "velocity_y": {"min": -250, "max": -300},
+        "velocity_y": {"min": -50, "max": -100},
         "frames": [0]
       }
     },
@@ -68,7 +68,7 @@
         "pool": "special_coins",
         "spawn_time": {"min": 1, "max": 4},
         "velocity_x": {"min": -100, "max": 200},
-        "velocity_y": {"min": -280, "max": -330}
+        "velocity_y": {"min": -80, "max": -130}
       }
     },
     "coin_3times_spawner": {
@@ -80,7 +80,7 @@
         "pool": "special_coins",
         "spawn_time": {"min": 2, "max": 8},
         "velocity_x": {"min": -300, "max": 300},
-        "velocity_y": {"min": -310, "max": -360}
+        "velocity_y": {"min": -110, "max": -160}
       }
     },
     "coin_4times_spawner": {
@@ -92,7 +92,7 @@
         "pool": "special_coins",
         "spawn_time": {"min": 2, "max": 16},
         "velocity_x": {"min": -400, "max": 400},
-        "velocity_y": {"min": -340, "max": -390}
+        "velocity_y": {"min": -140, "max": -190}
       }
     },
     "coin_5times_spawner": {
@@ -104,7 +104,7 @@
         "pool": "special_coins",
         "spawn_time": {"min": 4, "max": 8},
         "velocity_x": {"min": -500, "max": 500},
-        "velocity_y": {"min": -370, "max": -420}
+        "velocity_y": {"min": -170, "max": -220}
       }
     },
     "coin_6times_spawner": {
@@ -116,7 +116,7 @@
         "pool": "special_coins",
         "spawn_time": {"min": 4, "max": 16},
         "velocity_x": {"min": -600, "max": 600},
-        "velocity_y": {"min": -400, "max": -450}
+        "velocity_y": {"min": -200, "max": -250}
       }
     },
     "coin_7times_spawner": {
@@ -128,7 +128,7 @@
         "pool": "special_coins",
         "spawn_time": {"min": 8, "max": 16},
         "velocity_x": {"min": -700, "max": 700},
-        "velocity_y": {"min": -430, "max": -480}
+        "velocity_y": {"min": -230, "max": -280}
       }
     },
     "coin_8times_spawner": {
@@ -140,7 +140,7 @@
         "pool": "special_coins",
         "spawn_time": {"min": 8, "max": 32},
         "velocity_x": {"min": -800, "max": 800},
-        "velocity_y": {"min": -460, "max": -510}
+        "velocity_y": {"min": -260, "max": -310}
       }
     },
     "coin_9times_spawner": {
@@ -152,7 +152,7 @@
         "pool": "special_coins",
         "spawn_time": {"min": 16, "max": 32},
         "velocity_x": {"min": -900, "max": 900},
-        "velocity_y": {"min": -490, "max": -540}
+        "velocity_y": {"min": -290, "max": -340}
       }
     },
     "coin_10times_spawner": {
@@ -164,7 +164,7 @@
         "pool": "special_coins",
         "spawn_time": {"min": 16, "max": 64},
         "velocity_x": {"min": -1000, "max": 1000},
-        "velocity_y": {"min": -420, "max": -570}
+        "velocity_y": {"min": -320, "max": -370}
       }
     },
     "bomb_spawner": {
@@ -176,7 +176,7 @@
         "pool": "bombs",
         "spawn_time": {"min": 1, "max": 5},
         "velocity_x": {"min": -100, "max": 100},
-        "velocity_y": {"min": -250, "max": -500}
+        "velocity_y": {"min": -50, "max": -300}
       }
     }
   }
