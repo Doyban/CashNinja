@@ -3,7 +3,6 @@ var CashNinja = CashNinja || {};
 CashNinja.UpgradeItem = function (game_state, name, position, properties) {
   "use strict";
   CashNinja.MenuItem.call(this, game_state, name, position, properties); // Extend MenuItem class.
-  // CashNinja.StartStateItem.call(this, game_state, name, position, properties); // Extend StartStateItem class.
 
   this.price = properties.price; // Set up price.
 
@@ -32,6 +31,7 @@ CashNinja.UpgradeItem.prototype.select = function () {
     this.game_state.state.start("BootState", true, false, this.level_file, this.state_name); // Start next Phaser state.
   } else {
     // Not enough coins to buy upgrade.
-    alert("You don't have enough coins to buy this upgrade.")
+    alert("You don't have enough coins to buy this upgrade.");
+    this.game_state.state.start("BootState", true, false, "assets/levels/store.json", "StoreState"); // Start next Phaser state.
   }
 };

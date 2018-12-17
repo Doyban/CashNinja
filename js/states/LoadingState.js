@@ -17,6 +17,31 @@ CashNinja.LoadingState.prototype.init = function (level_data, next_state) {
 
 CashNinja.LoadingState.prototype.preload = function () {
   "use strict";
+  // Load images for menu.
+  this.load.image('exit', 'assets/images/exit.png', 48, 55);
+  this.load.image('invite', 'assets/images/invite.png', 48, 48);
+  this.load.image('share', 'assets/images/share.png', 48, 48);
+  this.load.image('shop', 'assets/images/shop.png', 48, 48);
+  this.load.image('start', 'assets/images/start.png', 140, 62);
+  
+  // Load sounds.
+  this.load.audio('cut', [
+            'assets/sounds/cut.ogg',
+            'assets/sounds/cut.mp3']
+  );
+  this.load.audio('game_over', [
+            'assets/sounds/game_over.ogg',
+            'assets/sounds/game_over.mp3']
+  );
+  this.load.audio('hit_bomb', [
+            'assets/sounds/hit_bomb.ogg',
+            'assets/sounds/hit_bomb.mp3']
+  );
+  this.load.audio('hit_coin', [
+            'assets/sounds/hit_coin.ogg',
+            'assets/sounds/hit_coin.mp3']
+  );
+  
   var assets, asset_loader, asset_key, asset;
   assets = this.level_data.assets;
 

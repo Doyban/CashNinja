@@ -27,11 +27,11 @@
     },
     "title": {
       "type": "title",
-      "position": {"x": 0.5, "y": 0.05},
+      "position": {"x": 0.5, "y": 0.1},
       "properties": {
         "text": "Store",
         "style": {
-          "font": "48px Futura",
+          "font": "32px Futura",
           "fill": "#FF9912"
         },
         "group": "hud",
@@ -40,20 +40,19 @@
     },
     "coin_item": {
       "type": "coin",
-      "position": {"x": 0.45, "y": 0.95},
+      "position": {"x": 0.455, "y": 0.91},
       "properties": {
         "texture": "coin_image",
-        "group": "hud",
-        "anchor": {"x": 0.5, "y": 0.5}
+        "group": "hud"
       }
     },
     "money": {
       "type": "money",
-      "position": {"x": 0.47, "y": 0.93},
+      "position": {"x": 0.5, "y": 0.92},
       "properties": {
         "text": "",
         "style": {
-          "font": "30px Times New Roman",
+          "font": "18px Times New Roman",
           "fill": "#887731"
         },
         "group": "hud"
@@ -61,11 +60,11 @@
     },
     "silver_sword_item": {
       "type": "upgrade_item",
-      "position": {"x": 0.1, "y": 0.3},
+      "position": {"x": 0.1, "y": 0.35},
       "properties": {
         "texture": "silver_sword_image",
         "group": "menu_items",
-        "price": 15000,
+        "price": 1500,
         "upgrade_type": "super_blade",
         "upgrade_properties": {"cut_multiplier": 2},
         "level_file": "assets/levels/level1.json",
@@ -74,11 +73,11 @@
     },
     "gold_sword_item": {
       "type": "upgrade_item",
-      "position": {"x": 0.3, "y": 0.3},
+      "position": {"x": 0.3, "y": 0.35},
       "properties": {
         "texture": "gold_sword_image",
         "group": "menu_items",
-        "price": 20000,
+        "price": 2000,
         "upgrade_type": "super_blade",
         "upgrade_properties": {"cut_multiplier": 3},
         "level_file": "assets/levels/level1.json",
@@ -87,11 +86,11 @@
     },
     "diamond_sword_item": {
       "type": "upgrade_item",
-      "position": {"x": 0.5, "y": 0.3},
+      "position": {"x": 0.5, "y": 0.35},
       "properties": {
         "texture": "diamond_sword_image",
         "group": "menu_items",
-        "price": 30000,
+        "price": 3000,
         "upgrade_type": "super_blade",
         "upgrade_properties": {"cut_multiplier": 6},
         "level_file": "assets/levels/level1.json",
@@ -100,11 +99,11 @@
     },
     "one_heart": {
       "type": "upgrade_item",
-      "position": {"x": 0.1, "y": 0.729},
+      "position": {"x": 0.1, "y": 0.72},
       "properties": {
         "texture": "one_heart_image",
         "group": "menu_items",
-        "price": 5000,
+        "price": 500,
         "upgrade_type": "extra_heart",
         "upgrade_properties": {"number_of_hearts": 1},
         "level_file": "assets/levels/level1.json",
@@ -117,7 +116,7 @@
       "properties": {
         "texture": "three_hearts_image",
         "group": "menu_items",
-        "price": 10000,
+        "price": 700,
         "upgrade_type": "extra_heart",
         "upgrade_properties": {"number_of_hearts": 3},
         "level_file": "assets/levels/level1.json",
@@ -130,7 +129,7 @@
       "properties": {
         "texture": "five_hearts_image",
         "group": "menu_items",
-        "price": 15000,
+        "price": 900,
         "upgrade_type": "extra_heart",
         "upgrade_properties": {"number_of_hearts": 5},
         "level_file": "assets/levels/level1.json",

@@ -41,6 +41,8 @@ CashNinja.LevelState.prototype.init = function (level_data) {
 
   this.score = 0; // Initialize score with default value of 0.
   this.cut_multiplier = 1; // Initialize cut multiplier as 1.
+
+  this.gameOverSound = this.game.add.audio('game_over'); // Add game over sound.
 };
 
 // Create games prefabs.
@@ -105,10 +107,17 @@ CashNinja.LevelState.prototype.check_collision = function (object) {
 // Game over.
 CashNinja.LevelState.prototype.game_over = function () {
   "use strict";
-  // this.game.state.start("BootState", true, false, "assets/levels/game_over.json", "GameOverState"); // Go to GameOverState. // TODO: Implement GameOverState with availability to share and back to main menu.
-  this.game.state.start("BootState", true, false, "assets/levels/title_screen.json", "TitleState"); // Go to GameOverState.
+  showAds(); // Show ads.
+
+  this.game.state.start("BootState", true, false, "assets/levels/game_over.json", "GameOverState"); // Go to GameOverState.
 
   localStorage.money = parseInt(localStorage.money) + this.score; // Increase player money with the score of the game.
+
+  this.lastScore = this.score; // Get last score.
+  localStorage.setItem('lastScore', this.lastScore); // Set last score.
+
   this.game.current_upgrades = []; // Clean game upgrades.
+
+  this.gameOverSound.play(); // Play game over sound.
 };
 

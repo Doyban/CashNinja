@@ -8,7 +8,9 @@ CashNinja.Menu = function (game_state, name, position, properties) {
 
   this.menu_items = properties.menu_items; // List of items.
 
-  this.swipe = this.game.input.activePointer; // Allow player to navigate by swiping.
+  this.swipe = game.input.activePointer; // Allow player to navigate by swiping.
+  
+  initAds(); // Initialize ads.
 };
 
 CashNinja.Menu.prototype = Object.create(CashNinja.Prefab.prototype);
@@ -16,24 +18,34 @@ CashNinja.Menu.prototype.constructor = CashNinja.Menu;
 
 CashNinja.Menu.prototype.update = function () {
   "use strict";
+  // Choose appropriate menu item.
+  this.startButton = this.game.add.button(this.game.world.centerX - 140 / 2, this.game.world.centerY - 62, "start", this.startGame, this);
+  // TODO: Add IAP.
+  // this.shopButton = this.game.add.button(this.game.world.width * 0.1, this.game.world.height * 0.7, "shop", this.startShop, this);
+  this.inviteButton = this.game.add.button(this.game.world.width * 0.35, this.game.world.height * 0.7, "invite", this.startInvite, this);
+  this.shareButton = this.game.add.button(this.game.world.width * 0.6, this.game.world.height * 0.7, "share", this.startShare, this);
+  this.exitButton = this.game.add.button(this.game.world.width * 0.85, this.game.world.height * 0.7, "exit", this.startExit, this);
+};
 
-  /**
-   * Choose appropriate menu item.
-   * To get action on whole item dimensions while swiping, item needs to be get from anchor of itself and substract & add half of width & height to it, then whole item dimensions are on action for swiping.
-   */
-  if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.game_item.position.x) - 162 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.game_item.position.x)) + 162 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.game_item.position.y) - 72 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.game_item.position.y)) + 72 / 2)) {
-    this.menu_items[0].select(); // Select first item.
-  }
-  else if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.store_item.position.x) - 100 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.store_item.position.x)) + 100 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.store_item.position.y) - 100 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.store_item.position.y)) + 100 / 2)) {
-    this.menu_items[1].select(); // Select second item.
-  }
-  else if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.invite_item.position.x) - 100 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.invite_item.position.x)) + 100 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.invite_item.position.y) - 100 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.invite_item.position.y)) + 100 / 2)) {
-    this.menu_items[2].select(); // Select third item.
-  }
-  else if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.share_item.position.x) - 100 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.share_item.position.x)) + 100 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.share_item.position.y) - 100 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.share_item.position.y)) + 100 / 2)) {
-    this.menu_items[3].select(); // Select fourth item.
-  }
-  else if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.exit_item.position.x) - 87 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.exit_item.position.x)) + 87 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.exit_item.position.y) - 100 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.exit_item.position.y)) + 100 / 2)) {
-    this.menu_items[4].select(); // Select fifth item.
-  }
+CashNinja.Menu.prototype.startGame = function () {
+  this.menu_items[0].select(); // Select first item.
+};
+
+// TODO: Add IAP.
+// CashNinja.Menu.prototype.startShop = function () {
+//   this.menu_items[1].select(); // Select second item.
+// };
+
+CashNinja.Menu.prototype.startInvite = function () {
+  // this.menu_items[2].select(); // Select third item.
+  inviteGame();
+};
+
+CashNinja.Menu.prototype.startShare = function () {
+  // this.menu_items[3].select(); // Select fourth item.
+  shareGame();
+};
+
+CashNinja.Menu.prototype.startExit = function () {
+  exitGame();
 };

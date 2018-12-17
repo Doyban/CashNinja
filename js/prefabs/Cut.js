@@ -23,6 +23,9 @@ CashNinja.Cut = function (game_state, name, position, properties) {
   this.kill_timer = this.game_state.time.create();
   this.kill_timer.add(Phaser.Timer.SECOND * properties.duration, this.kill, this);
   this.kill_timer.start();
+
+  this.cutSound = this.game.add.audio('cut'); // Add cut sound.
+  this.cutSound.play(); // Play cut sound.
 };
 
 CashNinja.Cut.prototype = Object.create(Phaser.Graphics.prototype);
@@ -31,6 +34,7 @@ CashNinja.Cut.prototype.constructor = CashNinja.Cut;
 CashNinja.Cut.prototype.kill = function () {
   "use strict";
 
+  // TODO: Fix bug with disappearing cutting line on Messenger iPad Pro.
   // Clear the graphics.
   this.clear();
   Phaser.Graphics.prototype.kill.call(this); // Call kill method from Phaser.Graphics class.

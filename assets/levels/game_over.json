@@ -25,19 +25,6 @@
       "properties": {
         "text": "Game Over",
         "style": {
-          "font": "48px Futura",
-          "fill": "#FF9912"
-        },
-        "group": "hud",
-        "anchor": {"x": 0.5, "y": 0.5}
-      }
-    },
-    "score": {
-      "type": "score",
-      "position": {"x": 0.5, "y": 0.7},
-      "properties": {
-        "text": "Score: ",
-        "style": {
           "font": "32px Futura",
           "fill": "#FF9912"
         },

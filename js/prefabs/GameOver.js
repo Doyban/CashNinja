@@ -27,5 +27,6 @@ CashNinja.GameOver.prototype.update = function () {
   }
   else if (this.swipe.isDown && (this.swipe.position.x >= ((this.game_state.prefabs.share_item.position.x) - 100 / 2) && this.swipe.position.x <= ((this.game_state.prefabs.share_item.position.x)) + 100 / 2) && (this.swipe.position.y >= ((this.game_state.prefabs.share_item.position.y) - 100 / 2) && this.swipe.position.y <= ((this.game_state.prefabs.share_item.position.y)) + 100 / 2)) {
     this.menu_items[1].select(); // Select second item.
+    shareScore(localStorage.lastScore);
   }
 };
