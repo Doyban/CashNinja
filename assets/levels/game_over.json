@@ -1,0 +1,90 @@
+{
+  "assets": {
+    "background_image": {"type": "image", "source": "assets/images/background.png"},
+    "coin_image": {"type": "image", "source": "assets/images/coin.png"},
+    "home_image": {"type": "image", "source": "assets/images/home.png"},
+    "share_image": {"type": "image", "source": "assets/images/share.png"}
+  },
+  "groups": [
+    "background",
+    "hud",
+    "menu_items"
+  ],
+  "prefabs": {
+    "background": {
+      "type": "background",
+      "position": {"x": 0, "y": 0},
+      "properties": {
+        "texture": "background_image",
+        "group": "background"
+      }
+    },
+    "title": {
+      "type": "title",
+      "position": {"x": 0.5, "y": 0.1},
+      "properties": {
+        "text": "Game Over",
+        "style": {
+          "font": "48px Futura",
+          "fill": "#FF9912"
+        },
+        "group": "hud",
+        "anchor": {"x": 0.5, "y": 0.5}
+      }
+    },
+    "score": {
+      "type": "score",
+      "position": {"x": 0.5, "y": 0.7},
+      "properties": {
+        "text": "Score: ",
+        "style": {
+          "font": "32px Futura",
+          "fill": "#FF9912"
+        },
+        "group": "hud",
+        "anchor": {"x": 0.5, "y": 0.5}
+      }
+    },
+    "coin_item": {
+      "type": "coin",
+      "position": {"x": 0.45, "y": 0.95},
+      "properties": {
+        "texture": "coin_image",
+        "group": "hud",
+        "anchor": {"x": 0.5, "y": 0.5}
+      }
+    },
+    "money": {
+      "type": "money",
+      "position": {"x": 0.47, "y": 0.93},
+      "properties": {
+        "text": "",
+        "style": {
+          "font": "30px Times New Roman",
+          "fill": "#887731"
+        },
+        "group": "hud"
+      }
+    },
+    "home_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.4, "y": 0.5},
+      "properties": {
+        "texture": "home_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/title_screen.json",
+        "state_name": "TitleState"
+      }
+    },
+    "share_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.6, "y": 0.5},
+      "properties": {
+        "texture": "share_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/title_screen.json",
+        "state_name": "TitleState"
+      }
+    }
+  }
+}

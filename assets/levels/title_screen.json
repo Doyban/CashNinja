@@ -1,0 +1,89 @@
+{
+  "assets": {
+    "background_image": {"type": "image", "source": "assets/images/background.png"},
+    "heart_image": {"type": "image", "source": "assets/images/heart.png"},
+    "exit_image": {"type": "image", "source": "assets/images/exit.png"},
+    "invite_image": {"type": "image", "source": "assets/images/invite.png"},
+    "play_image": {"type": "image", "source": "assets/images/start.png"},
+    "share_image": {"type": "image", "source": "assets/images/share.png"},
+    "shop_image": {"type": "image", "source": "assets/images/shop.png"}
+  },
+  "groups": [
+    "background",
+    "hud",
+    "menu_items"
+  ],
+  "prefabs": {
+    "background": {
+      "type": "background",
+      "position": {"x": 0, "y": 0},
+      "properties": {
+        "texture": "background_image",
+        "group": "background"
+      }
+    },
+    "title": {
+      "type": "title",
+      "position": {"x": 0.5, "y": 0.1},
+      "properties": {
+        "text": "CashNinja",
+        "style": {
+          "font": "72px Futura",
+          "fill": "#FF9912"
+        },
+        "group": "hud",
+        "anchor": {"x": 0.5, "y": 0.5}
+      }
+    },
+    "game_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.5, "y": 0.5},
+      "properties": {
+        "texture": "play_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/store.json",
+        "state_name": "StoreState"
+      }
+    },
+    "store_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.2, "y": 0.7},
+      "properties": {
+        "texture": "shop_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/shop.json",
+        "state_name": "ShopState"
+      }
+    },
+    "invite_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.4, "y": 0.7},
+      "properties": {
+        "texture": "invite_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/title_screen.json",
+        "state_name": "TitleState"
+      }
+    },
+    "share_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.6, "y": 0.7},
+      "properties": {
+        "texture": "share_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/title_screen.json",
+        "state_name": "TitleState"
+      }
+    },
+    "exit_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.8, "y": 0.7},
+      "properties": {
+        "texture": "exit_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/title_screen.json",
+        "state_name": "TitleState"
+      }
+    }
+  }
+}

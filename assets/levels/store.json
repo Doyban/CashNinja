@@ -1,0 +1,151 @@
+{
+  "assets": {
+    "background_image": {"type": "image", "source": "assets/images/background.png"},
+    "coin_image": {"type": "image", "source": "assets/images/coin.png"},
+    "heart_image": {"type": "image", "source": "assets/images/heart.png"},
+    "one_heart_image": {"type": "image", "source": "assets/images/one_heart.png"},
+    "three_hearts_image": {"type": "image", "source": "assets/images/three_hearts.png"},
+    "five_hearts_image": {"type": "image", "source": "assets/images/five_hearts.png"},
+    "iron_sword_image": {"type": "image", "source": "assets/images/sword_iron.png"},
+    "silver_sword_image": {"type": "image", "source": "assets/images/sword_silver.png"},
+    "gold_sword_image": {"type": "image", "source": "assets/images/sword_gold.png"},
+    "diamond_sword_image": {"type": "image", "source": "assets/images/sword_diamond.png"}
+  },
+  "groups": [
+    "background",
+    "hud",
+    "menu_items"
+  ],
+  "prefabs": {
+    "background": {
+      "type": "background",
+      "position": {"x": 0, "y": 0},
+      "properties": {
+        "texture": "background_image",
+        "group": "background"
+      }
+    },
+    "title": {
+      "type": "title",
+      "position": {"x": 0.5, "y": 0.05},
+      "properties": {
+        "text": "Store",
+        "style": {
+          "font": "48px Futura",
+          "fill": "#FF9912"
+        },
+        "group": "hud",
+        "anchor": {"x": 0.5, "y": 0.5}
+      }
+    },
+    "coin_item": {
+      "type": "coin",
+      "position": {"x": 0.45, "y": 0.95},
+      "properties": {
+        "texture": "coin_image",
+        "group": "hud",
+        "anchor": {"x": 0.5, "y": 0.5}
+      }
+    },
+    "money": {
+      "type": "money",
+      "position": {"x": 0.47, "y": 0.93},
+      "properties": {
+        "text": "",
+        "style": {
+          "font": "30px Times New Roman",
+          "fill": "#887731"
+        },
+        "group": "hud"
+      }
+    },
+    "silver_sword_item": {
+      "type": "upgrade_item",
+      "position": {"x": 0.1, "y": 0.3},
+      "properties": {
+        "texture": "silver_sword_image",
+        "group": "menu_items",
+        "price": 15000,
+        "upgrade_type": "super_blade",
+        "upgrade_properties": {"cut_multiplier": 2},
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
+      }
+    },
+    "gold_sword_item": {
+      "type": "upgrade_item",
+      "position": {"x": 0.3, "y": 0.3},
+      "properties": {
+        "texture": "gold_sword_image",
+        "group": "menu_items",
+        "price": 20000,
+        "upgrade_type": "super_blade",
+        "upgrade_properties": {"cut_multiplier": 3},
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
+      }
+    },
+    "diamond_sword_item": {
+      "type": "upgrade_item",
+      "position": {"x": 0.5, "y": 0.3},
+      "properties": {
+        "texture": "diamond_sword_image",
+        "group": "menu_items",
+        "price": 30000,
+        "upgrade_type": "super_blade",
+        "upgrade_properties": {"cut_multiplier": 6},
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
+      }
+    },
+    "one_heart": {
+      "type": "upgrade_item",
+      "position": {"x": 0.1, "y": 0.729},
+      "properties": {
+        "texture": "one_heart_image",
+        "group": "menu_items",
+        "price": 5000,
+        "upgrade_type": "extra_heart",
+        "upgrade_properties": {"number_of_hearts": 1},
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
+      }
+    },
+    "three_hearts": {
+      "type": "upgrade_item",
+      "position": {"x": 0.3, "y": 0.706},
+      "properties": {
+        "texture": "three_hearts_image",
+        "group": "menu_items",
+        "price": 10000,
+        "upgrade_type": "extra_heart",
+        "upgrade_properties": {"number_of_hearts": 3},
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
+      }
+    },
+    "five_hearts": {
+      "type": "upgrade_item",
+      "position": {"x": 0.5, "y": 0.71},
+      "properties": {
+        "texture": "five_hearts_image",
+        "group": "menu_items",
+        "price": 15000,
+        "upgrade_type": "extra_heart",
+        "upgrade_properties": {"number_of_hearts": 5},
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
+      }
+    },
+    "iron_sword_item": {
+      "type": "start_state_item",
+      "position": {"x": 0.8, "y": 0.5},
+      "properties": {
+        "texture": "iron_sword_image",
+        "group": "menu_items",
+        "level_file": "assets/levels/level1.json",
+        "state_name": "GameState"
+      }
+    }
+  }
+}
