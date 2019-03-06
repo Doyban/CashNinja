@@ -13,6 +13,7 @@ CashNinja.Coin = function (game_state, name, position, properties) {
   this.frame = this.frames[frame_index];
 
   this.body.setSize(12, 12); // Physical body of Coin.
+  this.hitCoinSound = this.game.add.audio('hit_coin'); // Add hit coin sound.
 };
 
 CashNinja.Coin.prototype = Object.create(CashNinja.Cuttable.prototype);
