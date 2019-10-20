@@ -9,7 +9,7 @@ CashNinja.Menu = function (game_state, name, position, properties) {
   this.menu_items = properties.menu_items; // List of items.
 
   this.swipe = game.input.activePointer; // Allow player to navigate by swiping.
-  
+
   initAd(); // Initialize ads.
 };
 
@@ -20,10 +20,9 @@ CashNinja.Menu.prototype.update = function () {
   "use strict";
   // Choose appropriate menu item.
   this.startButton = this.game.add.button(this.game.world.centerX - 140 / 2, this.game.world.centerY - 62, "start", this.startGame, this);
-  this.shopButton = this.game.add.button(this.game.world.width * 0.1, this.game.world.height * 0.7, "shop", this.startShop, this);
-  this.inviteButton = this.game.add.button(this.game.world.width * 0.35, this.game.world.height * 0.7, "invite", this.startInvite, this);
-  this.shareButton = this.game.add.button(this.game.world.width * 0.6, this.game.world.height * 0.7, "share", this.startShare, this);
-  this.exitButton = this.game.add.button(this.game.world.width * 0.85, this.game.world.height * 0.7, "exit", this.startExit, this);
+  this.shopButton = this.game.add.button(this.game.world.width * 0.2, this.game.world.height * 0.7, "shop", this.startShop, this);
+  this.inviteButton = this.game.add.button(this.game.world.width * 0.45, this.game.world.height * 0.7, "invite", this.startInvite, this);
+  this.shareButton = this.game.add.button(this.game.world.width * 0.7, this.game.world.height * 0.7, "share", this.startShare, this);
 };
 
 CashNinja.Menu.prototype.startGame = function () {
@@ -37,6 +36,7 @@ CashNinja.Menu.prototype.startShop = function () {
 CashNinja.Menu.prototype.startInvite = function () {
 //  alert("invite");
   this.options = {
+    actionType: '',
     method: 'apprequests',
     message: 'Play CashNinja with me!'
   };
@@ -46,13 +46,13 @@ CashNinja.Menu.prototype.startInvite = function () {
   this.onError = function(msg) {
 //    alert("Failed with invite");
   }
-    
+
   facebookConnectPlugin.showDialog(this.options, this.onSuccess, this.onError);
 };
 
 CashNinja.Menu.prototype.startShare = function () {
 //  alert("share");
-    
+
   this.options = {
     message: 'Play CashNinja!', // not supported on some apps (Facebook, Instagram)
     subject: 'Play CashNinja!', // fi. for email
@@ -68,8 +68,4 @@ CashNinja.Menu.prototype.startShare = function () {
   }
 
   window.plugins.socialsharing.shareWithOptions(this.options, this.onSuccess, this.onError);
-};
-
-CashNinja.Menu.prototype.startExit = function () {
-  navigator.app.exitApp();
 };
