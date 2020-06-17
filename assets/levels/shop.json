@@ -1,23 +1,37 @@
 {
   "assets": {
-    "background_image": {"type": "image", "source": "assets/images/background.png"},
-    "coin_image": {"type": "image", "source": "assets/images/coin.png"},
-    "coins_3k_image": {"type": "image", "source": "assets/images/coins_3k.png"},
-    "coins_15k_image": {"type": "image", "source": "assets/images/coins_15k.png"},
-    "coins_60k_image": {"type": "image", "source": "assets/images/coins_60k.png"},
-    "coins_250k_image": {"type": "image", "source": "assets/images/coins_250k.png"},
-    "coins_1M_image": {"type": "image", "source": "assets/images/coins_1M.png"},
-    "home_image": {"type": "image", "source": "assets/images/home.png"}
+    "background_image": {
+      "type": "image",
+      "source": "assets/images/background.png"
+    },
+    "coin_image": { "type": "image", "source": "assets/images/coin.png" },
+    "coins_3k_image": {
+      "type": "image",
+      "source": "assets/images/coins_3k.png"
+    },
+    "coins_15k_image": {
+      "type": "image",
+      "source": "assets/images/coins_15k.png"
+    },
+    "coins_60k_image": {
+      "type": "image",
+      "source": "assets/images/coins_60k.png"
+    },
+    "coins_250k_image": {
+      "type": "image",
+      "source": "assets/images/coins_250k.png"
+    },
+    "coins_1M_image": {
+      "type": "image",
+      "source": "assets/images/coins_1M.png"
+    },
+    "home_image": { "type": "image", "source": "assets/images/home.png" }
   },
-  "groups": [
-    "background",
-    "hud",
-    "menu_items"
-  ],
+  "groups": ["background", "hud", "menu_items"],
   "prefabs": {
     "background": {
       "type": "background",
-      "position": {"x": 0, "y": 0},
+      "position": { "x": 0, "y": 0 },
       "properties": {
         "texture": "background_image",
         "group": "background"
@@ -25,7 +39,7 @@
     },
     "title": {
       "type": "title",
-      "position": {"x": 0.5, "y": 0.1},
+      "position": { "x": 0.5, "y": 0.1 },
       "properties": {
         "text": "Shop",
         "style": {
@@ -33,12 +47,12 @@
           "fill": "#FF9912"
         },
         "group": "hud",
-        "anchor": {"x": 0.5, "y": 0.5}
+        "anchor": { "x": 0.5, "y": 0.5 }
       }
     },
     "coin_item": {
       "type": "coin",
-      "position": {"x": 0.455, "y": 0.91},
+      "position": { "x": 0.455, "y": 0.91 },
       "properties": {
         "texture": "coin_image",
         "group": "hud"
@@ -46,7 +60,7 @@
     },
     "money": {
       "type": "money",
-      "position": {"x": 0.5, "y": 0.92},
+      "position": { "x": 0.5, "y": 0.92 },
       "properties": {
         "text": "",
         "style": {
@@ -58,57 +72,57 @@
     },
     "coins_3k_item": {
       "type": "start_state_item",
-      "position": {"x": 0.1, "y": 0.45},
+      "position": { "x": 0.1, "y": 0.45 },
       "properties": {
         "texture": "coins_3k_image",
         "group": "menu_items",
-        "level_file": "assets/levels/store.json",
-        "state_name": "StoreState"
+        "level_file": "assets/levels/shop.json",
+        "state_name": "ShopState"
       }
     },
     "coins_15k_item": {
       "type": "start_state_item",
-      "position": {"x": 0.3, "y": 0.45},
+      "position": { "x": 0.3, "y": 0.45 },
       "properties": {
         "texture": "coins_15k_image",
         "group": "menu_items",
-        "level_file": "assets/levels/store.json",
-        "state_name": "StoreState"
+        "level_file": "assets/levels/shop.json",
+        "state_name": "ShopState"
       }
     },
     "coins_60k_item": {
       "type": "start_state_item",
-      "position": {"x": 0.5, "y": 0.45},
+      "position": { "x": 0.5, "y": 0.45 },
       "properties": {
         "texture": "coins_60k_image",
         "group": "menu_items",
-        "level_file": "assets/levels/store.json",
-        "state_name": "StoreState"
+        "level_file": "assets/levels/shop.json",
+        "state_name": "ShopState"
       }
     },
     "coins_250k_item": {
       "type": "start_state_item",
-      "position": {"x": 0.7, "y": 0.45},
+      "position": { "x": 0.7, "y": 0.45 },
       "properties": {
         "texture": "coins_250k_image",
         "group": "menu_items",
-        "level_file": "assets/levels/store.json",
-        "state_name": "StoreState"
+        "level_file": "assets/levels/shop.json",
+        "state_name": "ShopState"
       }
     },
     "coins_1M_item": {
       "type": "start_state_item",
-      "position": {"x": 0.9, "y": 0.45},
+      "position": { "x": 0.9, "y": 0.45 },
       "properties": {
         "texture": "coins_1M_image",
         "group": "menu_items",
-        "level_file": "assets/levels/store.json",
-        "state_name": "StoreState"
+        "level_file": "assets/levels/shop.json",
+        "state_name": "ShopState"
       }
     },
     "home_item": {
       "type": "start_state_item",
-      "position": {"x": 0.5, "y": 0.81},
+      "position": { "x": 0.5, "y": 0.81 },
       "properties": {
         "texture": "home_image",
         "group": "menu_items",

@@ -51,3 +51,4 @@ fabric.properties
 # Other
 .DS_Store
 Archive.zip
+.idea/workspace.xml
